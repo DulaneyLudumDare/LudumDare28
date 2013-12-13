@@ -1,0 +1,21 @@
+package com.gregswebserver.ld28.graphics;
+
+import com.gregswebserver.ld28.game.UsesGame;
+import com.gregswebserver.ld28.util.vectors.Vector2i;
+
+public class Graphic extends UsesGame {
+
+    public int[] pixels;
+    public Vector2i size;
+
+    public Graphic(Vector2i size) {
+        this.size = size;
+        pixels = new int[size.getX() * size.getY()];
+    }
+
+    public void clear() {
+        for (int i = 0; i < pixels.length; i++) {
+            pixels[i] = 0xffff00ff;
+        }
+    }
+}
