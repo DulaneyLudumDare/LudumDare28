@@ -5,9 +5,6 @@ import com.gregswebserver.ld28.graphics.screen.ScreenArea;
 import com.gregswebserver.ld28.graphics.sprite.SpriteSheet;
 import com.gregswebserver.ld28.util.Location;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class Level {

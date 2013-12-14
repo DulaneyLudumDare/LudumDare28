@@ -7,4 +7,8 @@ public class WallTile extends Tile{
     public WallTile(Vector2i coord) {
         super(coord, Sprite.wall_flat);
     }
+
+    public boolean collision() {
+        return true;
+    }
 }
