@@ -7,4 +7,6 @@ public abstract class Vector {
     public abstract double length();
 
     public abstract int getQuadrant();
+
+    public abstract int getDirection();
 }

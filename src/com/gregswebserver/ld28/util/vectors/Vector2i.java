@@ -66,6 +66,14 @@ public class Vector2i extends Vector {
         return 0;
     }
 
+    public int getDirection() {
+        if (x == 0 && y > 0) return 1;
+        if (y == 0 && x > 0) return 2;
+        if (x == 0 && y < 0) return 3;
+        if (y == 0 && x < 0) return 4;
+        return 0;
+    }
+
     public boolean contains(Vector2i in) {
         if (getQuadrant() != in.getQuadrant()) return false;
         switch (in.getQuadrant()) {

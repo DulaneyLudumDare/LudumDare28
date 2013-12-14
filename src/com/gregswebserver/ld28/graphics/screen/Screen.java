@@ -63,6 +63,16 @@ public class Screen extends Canvas {
         bs.show();
     }
 
+    public void deleteArea(String name) {
+        if (areas.containsKey(name)) {
+            areas.remove(name);
+        }
+    }
+
+    public void addArea(String name, ScreenArea area) {
+        areas.put(name, area);
+    }
+
     protected void renderImage(Vector2i position, Graphic image) {
         for (int x = 0; x < image.size.getX(); x++) {
             int xx = position.getX() + x;
@@ -102,7 +112,7 @@ public class Screen extends Canvas {
         }
     }
 
-    public void loadScene(String name, Scene scene) {
+    public void loadScene(Scene scene) {
         areas = scene.getAreas();
     }
 }
