@@ -33,5 +33,3 @@ visuals
         16x tiles
         32x paths
 
-
-asdf
