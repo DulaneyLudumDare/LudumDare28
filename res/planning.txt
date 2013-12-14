@@ -1,0 +1,35 @@
+Only Get One:
+-----
+labrynth- Multiple players no minimap
+    one light at a time
+    magic based
+    multiple levels
+    3 people, more complex maze as progresses
+    easy mode with minimap
+
+timing
+    time limit on each character
+    cannot advance manually
+    once joined together time is the same, move together
+    still switches once players are joined
+    time limit increases with level size
+
+visuals
+    landmarks
+        statues
+        cracks
+        pools of water
+        piles of stuff
+        cracks
+        leaks
+        bones
+        buckets
+        tools
+        chains
+        cave-in
+        holes
+    lighting
+        vignette shadow to simulate lighting
+        16x tiles
+        32x paths
+
