@@ -1,6 +1,6 @@
 package com.gregswebserver.ld28.graphics.sprite;
 
-import com.gregswebserver.ld28.graphics.Graphic;
+import com.gregswebserver.ld28.graphics.util.Graphic;
 import com.gregswebserver.ld28.util.vectors.Vector2i;
 
 public class Sprite extends Graphic {
@@ -34,10 +34,5 @@ public class Sprite extends Graphic {
                 }
             }
         }
-    }
-
-    public Sprite(Vector2i size, int[] pixels) {
-        super(size);
-        this.pixels = pixels;
     }
 }

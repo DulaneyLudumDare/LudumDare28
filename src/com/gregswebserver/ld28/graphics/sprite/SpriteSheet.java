@@ -1,6 +1,6 @@
 package com.gregswebserver.ld28.graphics.sprite;
 
-import com.gregswebserver.ld28.graphics.Graphic;
+import com.gregswebserver.ld28.graphics.util.Graphic;
 import com.gregswebserver.ld28.util.vectors.Vector2i;
 
 import javax.imageio.ImageIO;
