@@ -9,6 +9,7 @@ import java.io.IOException;
 
 public class SpriteSheet extends Graphic {
 
+
     public SpriteSheet(String path, int size) {
         super(new Vector2i(size));
         load(path);
