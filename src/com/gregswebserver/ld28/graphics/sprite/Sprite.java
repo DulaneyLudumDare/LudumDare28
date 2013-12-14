@@ -11,6 +11,7 @@ public class Sprite extends Graphic {
     }
 
     public Sprite(Vector2i pos, int size, SpriteSheet spritesheet) {
+        // Single-size square sprites, arranged on a grid on the sheet.
         super(new Vector2i(size));
         clear();
         for (int x = 0; x < size; x++) {
@@ -24,6 +25,7 @@ public class Sprite extends Graphic {
     }
 
     public Sprite(Vector2i start, Vector2i dim, SpriteSheet spritesheet) {
+        //Dynamic sprites with varying sizes and start positions.
         super(dim);
         clear();
         if (start.getQuadrant() == 1 && spritesheet.size.contains(start.plus(dim))) {

@@ -14,8 +14,8 @@ import java.util.HashMap;
 public class Screen extends Canvas {
     private static final long serialVersionUID = 1L;
 
-    private final Vector2i size = new Vector2i(640, 480);
-    private final String title = "Sight";
+    public final Vector2i size = new Vector2i(640, 480);
+    public final String title = "Sight";
     private String suffix = "";
 
     private BufferedImage image = new BufferedImage(size.getX(), size.getY(), BufferedImage.TYPE_INT_RGB);
