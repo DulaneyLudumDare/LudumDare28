@@ -45,18 +45,24 @@ public class Vector2i extends Vector {
         return this;
     }
 
-    public Vector2i plus(Vector2i in) {
-        return new Vector2i(this).add(in);
-    }
-
     public Vector2i subtract(Vector2i in) {
         this.x -= in.x;
         this.y -= in.y;
         return this;
     }
 
-    public Vector2i minus(Vector2i in) {
-        return new Vector2i(this).subtract(in);
+    public Vector2i rotate(double degrees) {
+        double rads = degrees * Math.PI / 180;
+        this.x = (int) ((x * Math.cos(rads)) - (y * Math.sin(rads)));
+        this.y = (int) ((y * Math.cos(rads)) + (x * Math.sin(rads)));
+        return this;
+    }
+
+    public Vector2i flip() {
+        int a = x;
+        this.x = y;
+        this.y = a;
+        return this;
     }
 
     public int getQuadrant() {

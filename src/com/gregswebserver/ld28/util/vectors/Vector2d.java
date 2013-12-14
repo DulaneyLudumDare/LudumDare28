@@ -44,18 +44,24 @@ public class Vector2d extends Vector {
         return this;
     }
 
-    public Vector2d plus(Vector2d in) {
-        return new Vector2d(this).add(in);
-    }
-
     public Vector2d subtract(Vector2d in) {
         this.x += in.x;
         this.y += in.y;
         return this;
     }
 
-    public Vector2d minus(Vector2d in) {
-        return new Vector2d(this).subtract(in);
+    public Vector2d rotate(double degrees) {
+        double rads = degrees * Math.PI / 180;
+        this.x = (x * Math.cos(rads)) - (y * Math.sin(rads));
+        this.y = (y * Math.cos(rads)) + (x * Math.sin(rads));
+        return this;
+    }
+
+    public Vector2d flip() {
+        double a = x;
+        this.x = y;
+        this.y = a;
+        return this;
     }
 
     public int getQuadrant() {

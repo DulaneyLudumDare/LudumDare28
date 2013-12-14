@@ -3,6 +3,7 @@ package com.gregswebserver.ld28.game;
 import com.gregswebserver.ld28.graphics.screen.ScreenArea;
 import com.gregswebserver.ld28.graphics.screen.ScreenObject;
 import com.gregswebserver.ld28.graphics.sprite.Sprite;
+import com.gregswebserver.ld28.graphics.sprite.SpriteAnimation;
 import com.gregswebserver.ld28.util.Location;
 import com.gregswebserver.ld28.util.vectors.Vector2d;
 import com.gregswebserver.ld28.util.vectors.Vector2i;
@@ -42,19 +43,26 @@ public class Player extends UsesGame {
         if (location.isMoving()) {
             switch (location.getVelocity().getDirection()) {
                 case 1:
-
+                    return SpriteAnimation.move_up.iterator().next();
                 case 2:
+                    return SpriteAnimation.move_side.iterator().next();
                 case 3:
+                    return SpriteAnimation.move_down.iterator().next();
                 case 4:
+                    return SpriteAnimation.move_side.iterator().next().flip(0);
                 default:
                     return null;
             }
         } else {
             switch (location.getVelocity().getDirection()) {
                 case 1:
+                    return SpriteAnimation.stop_up.iterator().next();
                 case 2:
+                    return SpriteAnimation.stop_side.iterator().next();
                 case 3:
+                    return SpriteAnimation.stop_down.iterator().next();
                 case 4:
+                    return SpriteAnimation.stop_side.iterator().next().flip(0);
                 default:
                     return null;
             }
