@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd74f9fb-4584-4eca-ad46-64e911a0ad4a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/levels/tutorial.png" afterPath="$PROJECT_DIR$/res/levels/tutorial.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/Level.java" afterPath="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/Level.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LudumDare28.iws" />
@@ -100,7 +98,7 @@
       <file leaf-file-name="Level.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/Level.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="40" selection-start="1387" selection-end="1387" vertical-scroll-proportion="0.5109983" vertical-offset="276" max-vertical-offset="1037">
+            <state line="34" column="40" selection-start="1387" selection-end="1387" vertical-scroll-proportion="0.85617596" vertical-offset="72" max-vertical-offset="1037">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -867,7 +865,11 @@
       <created>1387055998981</created>
       <updated>1387055998981</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="loaded pixels into level&#10;">
+      <created>1387056678434</created>
+      <updated>1387056678434</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -928,7 +930,8 @@
     <MESSAGE value="added specific tiles" />
     <MESSAGE value="wall tile has collision" />
     <MESSAGE value="diverged LandmarkTile &amp; working on level loading" />
-    <option name="LAST_COMMIT_MESSAGE" value="diverged LandmarkTile &amp; working on level loading" />
+    <MESSAGE value="loaded pixels into level&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="loaded pixels into level&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1313,7 +1316,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/Level.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="40" selection-start="1387" selection-end="1387" vertical-scroll-proportion="0.5109983" vertical-offset="276" max-vertical-offset="1037">
+        <state line="34" column="40" selection-start="1387" selection-end="1387" vertical-scroll-proportion="0.85617596" vertical-offset="72" max-vertical-offset="1037">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
