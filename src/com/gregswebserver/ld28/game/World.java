@@ -11,10 +11,10 @@ public class World {
     public int activePlayer = 0;
 
     public World(String name, int numPlayers) {
-        players = new HashMap<Integer, Player>();
-        //Create new level
+        players = new HashMap<>();
+        level = new Level(name);
         for (int i = 0; i < numPlayers; i++) {
-            players.put(i, new Player(null));
+            players.put(i, new Player(level.getSpawnLocation()));
         }
     }
 

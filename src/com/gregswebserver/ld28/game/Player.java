@@ -39,14 +39,25 @@ public class Player extends UsesGame {
     }
 
     public Sprite getSprite() {
-        switch (location.getVelocity().getDirection()) {
-            //TODO add player walking sprites and animations
-            case 1:
-            case 2:
-            case 3:
-            case 4:
-            default:
-                return null;
+        if (location.isMoving()) {
+            switch (location.getVelocity().getDirection()) {
+                case 1:
+
+                case 2:
+                case 3:
+                case 4:
+                default:
+                    return null;
+            }
+        } else {
+            switch (location.getVelocity().getDirection()) {
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                default:
+                    return null;
+            }
         }
     }
 }
