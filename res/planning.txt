@@ -33,3 +33,17 @@ visuals
         16x tiles
         32x paths
 
+sounds
+    event completion-
+        joining together
+        leaving the level
+    ambiance
+        dripping
+        wind noises
+    walking
+        splash
+    random event
+        bats
+        rock falling
+
+
