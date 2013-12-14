@@ -24,4 +24,12 @@ public class KeyboardHandler extends UsesGame implements KeyListener {
     public boolean isPressed(int key) {
         return keys.contains(key);
     }
+
+    public int getArrowDir() {
+        if (isPressed(KeyEvent.VK_UP) || isPressed(KeyEvent.VK_W)) return 1;
+        else if (isPressed(KeyEvent.VK_RIGHT) || isPressed(KeyEvent.VK_D)) return 2;
+        else if (isPressed(KeyEvent.VK_DOWN) || isPressed(KeyEvent.VK_S)) return 3;
+        else if (isPressed(KeyEvent.VK_LEFT) || isPressed(KeyEvent.VK_A)) return 4;
+        else return 0;
+    }
 }
