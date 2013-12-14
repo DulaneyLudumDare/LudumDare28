@@ -5,6 +5,8 @@ import com.gregswebserver.ld28.util.vectors.Vector2i;
 
 public class Graphic extends UsesGame {
 
+    public final int transparency = 0xffff00ff;
+
     public int[] pixels;
     public Vector2i size;
 
@@ -15,7 +17,7 @@ public class Graphic extends UsesGame {
 
     public void clear() {
         for (int i = 0; i < pixels.length; i++) {
-            pixels[i] = 0xffff00ff;
+            pixels[i] = transparency;
         }
     }
 }

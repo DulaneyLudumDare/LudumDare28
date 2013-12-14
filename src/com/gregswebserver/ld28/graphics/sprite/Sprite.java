@@ -35,9 +35,4 @@ public class Sprite extends Graphic {
             }
         }
     }
-
-    public Sprite(Vector2i size, int[] pixels) {
-        super(size);
-        this.pixels = pixels;
-    }
 }

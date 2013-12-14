@@ -1,6 +1,5 @@
 package com.gregswebserver.ld28.graphics;
 
-import com.gregswebserver.ld28.util.Location;
 import com.gregswebserver.ld28.util.vectors.Vector2i;
 
 import javax.swing.*;
@@ -9,27 +8,23 @@ import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Screen extends Canvas {
     private static final long serialVersionUID = 1L;
 
-    private static boolean debug = false;
-    private static int WIDTH = 300;
-    private static int HEIGHT = WIDTH * 9 / 16;
-    private static int SCALE = 2;
-    private static int BGCOLOR = 0x60A0FF;
-    private static String TITLE = "Game AI Simulator";
+    private final Vector2i size = new Vector2i(640, 480);
+    private final String title = "Sight";
+    private String suffix = "";
 
-    private BufferedImage image = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB);
+    private BufferedImage image = new BufferedImage(size.getX(), size.getY(), BufferedImage.TYPE_INT_RGB);
     private int[] pixels = ((DataBufferInt) image.getRaster().getDataBuffer()).getData();
     private JFrame frame;
-    private String suffix = "";
-    public ArrayList<ScreenArea> areas;
+    private HashMap<String, ScreenArea> areas;
 
     public Screen() {
         frame = new JFrame();
-        Dimension size = new Dimension(WIDTH * SCALE, HEIGHT * SCALE);
-        setPreferredSize(size);
+        setPreferredSize(new Dimension(size.getX(), size.getY()));
         frame.setResizable(false);
         updateWindowText();
         frame.add(this);
@@ -37,7 +32,7 @@ public class Screen extends Canvas {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
-        areas = new ArrayList<ScreenArea>();
+        areas = new HashMap<>();
         clear();
     }
 
@@ -48,17 +43,17 @@ public class Screen extends Canvas {
             return;
         }
         clear();
-        for (ScreenArea area : areas) {
-            area.render();
-            for (int x = 0; x < area.size.getX(); x++) {
-                int xx = area.location.getX() + x;
-                for (int y = 0; y < area.size.getY(); y++) {
-                    int yy = area.location.getY() + y;
-                    if (xx >= WIDTH || xx < 0 || yy >= HEIGHT || yy < 0) continue;
-                    int col = area.pixels[x + y * area.size.getX()];
-                    if (col != 0xffff00ff || debug) pixels[xx + yy * WIDTH] = col;
+        ArrayList<String> parsedList = new ArrayList<>();
+        int activeLayer = 0;
+        while (parsedList.size() < areas.size()) {
+            for (String name : areas.keySet()) {
+                ScreenArea area = areas.get(name);
+                if (area.getLayer() == activeLayer && !parsedList.contains(name)) {
+                    renderImage(area.getPosition(), area);
+                    parsedList.add(name);
                 }
             }
+            activeLayer++;
         }
 
         Graphics g = bs.getDrawGraphics();
@@ -67,9 +62,22 @@ public class Screen extends Canvas {
         bs.show();
     }
 
+    protected void renderImage(Vector2i position, Graphic image) {
+        for (int x = 0; x < image.size.getX(); x++) {
+            int xx = position.getX() + x;
+            for (int y = 0; y < image.size.getY(); y++) {
+                int yy = position.getY() + y;
+                if (xx >= position.getX() || xx < 0 || yy >= position.getY() || yy < 0)
+                    continue;
+                int col = image.pixels[x + (y * image.size.getX())];
+                pixels[xx + (yy * size.getX())] = col;
+            }
+        }
+    }
+
     public void clear() {
         for (int i = 0; i < pixels.length; i++) {
-            pixels[i] = BGCOLOR;
+            pixels[i] = 0x60A0FF;
         }
     }
 
@@ -84,52 +92,26 @@ public class Screen extends Canvas {
     }
 
     public void updateWindowText() {
-        frame.setTitle(TITLE + suffix);
+        frame.setTitle(title + suffix);
     }
 
     public void update() {
-        for (ScreenArea area : areas) {
+        for (ScreenArea area : areas.values()) {
             area.location.tick();
-            area.lifetime.tick();
-            area.render();
         }
-        checkDeath();
     }
 
     public void clearAreas() {
         areas.clear();
-        ScreenArea.nextID = 0;
-        if (debug) System.out.println("ClearedAreas");
     }
 
-    public int addArea(Vector2i size, Location position) {
-        ScreenArea area = new ScreenArea(size, position);
-        areas.add(area);
-        if (debug) System.out.println("AddedArea " + area.id);
-        return area.id;
+    public void addArea(String name, ScreenArea area) {
+        areas.put(name, area);
     }
 
-    public void deleteArea(int id) {
-        int index = getIndex(id);
-        if (index == -1) return;
-        areas.remove(index);
-        if (debug) System.out.println("DeletedArea " + id);
-    }
-
-    public int getIndex(int id) {
-        for (int i = 0; i < areas.size(); i++) {
-            if (areas.get(i).id == id) return i;
-        }
-        return -1;
-    }
-
-    private void checkDeath() {
-        for (int i = 0; i < areas.size(); i++) {
-            if (areas.get(i).lifetime.isDead()) {
-                areas.remove(i);
-                checkDeath();
-                return;
-            }
+    public void deleteArea(String name) {
+        if (areas.containsKey(name)) {
+            areas.remove(name);
         }
     }
 }

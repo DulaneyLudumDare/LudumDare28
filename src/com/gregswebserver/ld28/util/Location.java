@@ -1,7 +1,6 @@
 package com.gregswebserver.ld28.util;
 
 import com.gregswebserver.ld28.util.vectors.Vector2d;
-import com.gregswebserver.ld28.util.vectors.Vector2i;
 
 public class Location implements Tickable {
 
@@ -50,8 +49,8 @@ public class Location implements Tickable {
         this.acceleration = in;
     }
 
-    public Vector2i getPosition() {
-        return position.toVector2i();
+    public Vector2d getPosition() {
+        return position;
     }
 
     public Vector2d getVelocity() {
