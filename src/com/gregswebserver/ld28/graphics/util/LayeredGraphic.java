@@ -1,9 +1,9 @@
-package com.gregswebserver.ld28.graphics;
+package com.gregswebserver.ld28.graphics.util;
 
 import com.gregswebserver.ld28.util.Location;
 import com.gregswebserver.ld28.util.vectors.Vector2i;
 
-public class LayeredGraphic extends Graphic {
+public abstract class LayeredGraphic extends Graphic {
 
     protected int layer;
     protected Location location;

@@ -1,5 +1,6 @@
-package com.gregswebserver.ld28.graphics;
+package com.gregswebserver.ld28.graphics.screen;
 
+import com.gregswebserver.ld28.graphics.util.LayeredGraphic;
 import com.gregswebserver.ld28.util.Location;
 import com.gregswebserver.ld28.util.Tickable;
 import com.gregswebserver.ld28.util.vectors.Vector2i;
@@ -49,7 +50,7 @@ public class ScreenArea extends LayeredGraphic implements Tickable {
 
     public void tick() {
         for (ScreenObject object : objects.values()) {
-            object.location.tick();
+            object.tick();
         }
     }
 }

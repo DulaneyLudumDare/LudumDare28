@@ -1,9 +1,9 @@
-package com.gregswebserver.ld28.graphics;
+package com.gregswebserver.ld28.graphics.util;
 
 import com.gregswebserver.ld28.game.UsesGame;
 import com.gregswebserver.ld28.util.vectors.Vector2i;
 
-public class Graphic extends UsesGame {
+public abstract class Graphic extends UsesGame {
 
     public final int transparency = 0xffff00ff;
 

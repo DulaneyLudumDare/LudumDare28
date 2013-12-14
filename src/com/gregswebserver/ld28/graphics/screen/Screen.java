@@ -1,5 +1,6 @@
-package com.gregswebserver.ld28.graphics;
+package com.gregswebserver.ld28.graphics.screen;
 
+import com.gregswebserver.ld28.graphics.util.Graphic;
 import com.gregswebserver.ld28.util.vectors.Vector2i;
 
 import javax.swing.*;
@@ -97,21 +98,11 @@ public class Screen extends Canvas {
 
     public void update() {
         for (ScreenArea area : areas.values()) {
-            area.location.tick();
+            area.tick();
         }
     }
 
-    public void clearAreas() {
-        areas.clear();
-    }
-
-    public void addArea(String name, ScreenArea area) {
-        areas.put(name, area);
-    }
-
-    public void deleteArea(String name) {
-        if (areas.containsKey(name)) {
-            areas.remove(name);
-        }
+    public void loadScene(String name, Scene scene) {
+        areas = scene.getAreas();
     }
 }
