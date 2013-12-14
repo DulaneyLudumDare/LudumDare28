@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd74f9fb-4584-4eca-ad46-64e911a0ad4a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/levels/tutorial.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/tile/PathLandMarkTile.java" />
-      <change type="MOVED" beforePath="C:\Users\Daniel\IdeaProjects\LudumDare28\src\com\gregswebserver\ld28\game\level\tile\LandmarkTile.java" afterPath="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/tile/WallLandmarkTile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/levels/tutorial.png" afterPath="$PROJECT_DIR$/res/levels/tutorial.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/Level.java" afterPath="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/Level.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gregswebserver/ld28/util/vectors/Vector2d.java" afterPath="$PROJECT_DIR$/src/com/gregswebserver/ld28/util/vectors/Vector2d.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gregswebserver/ld28/util/vectors/Vector2i.java" afterPath="$PROJECT_DIR$/src/com/gregswebserver/ld28/util/vectors/Vector2i.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LudumDare28.iws" />
@@ -81,10 +77,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PathLandMarkTile.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="PathLandMarkTile.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/tile/PathLandMarkTile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="302" selection-end="302" vertical-scroll-proportion="0.28764805" vertical-offset="0" max-vertical-offset="591">
+            <state line="10" column="0" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -101,10 +97,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Level.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Level.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/Level.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="17" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.0" vertical-offset="208" max-vertical-offset="1071">
+            <state line="34" column="40" selection-start="1387" selection-end="1387" vertical-scroll-proportion="0.5109983" vertical-offset="276" max-vertical-offset="1037">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -128,7 +124,7 @@
       <file leaf-file-name="Vector2i.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/util/vectors/Vector2i.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="5" selection-start="2296" selection-end="2296" vertical-scroll-proportion="0.0" vertical-offset="1398" max-vertical-offset="2040">
+            <state line="103" column="5" selection-start="2296" selection-end="2296" vertical-scroll-proportion="0.0" vertical-offset="1449" max-vertical-offset="2040">
               <folding>
                 <element signature="e#2326#2327#0" expanded="true" />
                 <element signature="e#2352#2353#0" expanded="true" />
@@ -218,10 +214,10 @@
         <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/tile/WallTile.java" />
         <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/util/vectors/Vector2i.java" />
         <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/util/vectors/Vector2d.java" />
-        <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/Level.java" />
         <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/tile/LandmarkTile.java" />
         <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/tile/PathLandMarkTile.java" />
         <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/tile/WallLandmarkTile.java" />
+        <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/Level.java" />
       </list>
     </option>
   </component>
@@ -867,7 +863,11 @@
       <created>1387053250608</created>
       <updated>1387053250608</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="diverged LandmarkTile &amp; working on level loading">
+      <created>1387055998981</created>
+      <updated>1387055998981</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -884,6 +884,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -894,7 +895,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Metrics" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -927,7 +927,8 @@
     <MESSAGE value="added tile and level class" />
     <MESSAGE value="added specific tiles" />
     <MESSAGE value="wall tile has collision" />
-    <option name="LAST_COMMIT_MESSAGE" value="wall tile has collision" />
+    <MESSAGE value="diverged LandmarkTile &amp; working on level loading" />
+    <option name="LAST_COMMIT_MESSAGE" value="diverged LandmarkTile &amp; working on level loading" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1266,23 +1267,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/levels/tutorial.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/util/vectors/Vector2i.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="5" selection-start="2296" selection-end="2296" vertical-scroll-proportion="0.0" vertical-offset="1398" max-vertical-offset="2040">
-          <folding>
-            <element signature="e#2326#2327#0" expanded="true" />
-            <element signature="e#2352#2353#0" expanded="true" />
-            <element signature="e#2383#2384#0" expanded="true" />
-            <element signature="e#2410#2411#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/util/vectors/Vector2d.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="108" column="32" selection-start="2382" selection-end="2382" vertical-scroll-proportion="0.0" vertical-offset="1415" max-vertical-offset="2006">
@@ -1290,15 +1274,6 @@
             <element signature="e#2321#2322#0" expanded="true" />
             <element signature="e#2347#2348#0" expanded="true" />
             <element signature="e#2407#2408#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/Level.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="17" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.0" vertical-offset="208" max-vertical-offset="1071">
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1312,7 +1287,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/tile/PathLandMarkTile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="302" selection-end="302" vertical-scroll-proportion="0.28764805" vertical-offset="0" max-vertical-offset="591">
+        <state line="10" column="0" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/util/vectors/Vector2i.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="5" selection-start="2296" selection-end="2296" vertical-scroll-proportion="0.0" vertical-offset="1449" max-vertical-offset="2040">
+          <folding>
+            <element signature="e#2326#2327#0" expanded="true" />
+            <element signature="e#2352#2353#0" expanded="true" />
+            <element signature="e#2383#2384#0" expanded="true" />
+            <element signature="e#2410#2411#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/levels/tutorial.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/Level.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="40" selection-start="1387" selection-end="1387" vertical-scroll-proportion="0.5109983" vertical-offset="276" max-vertical-offset="1037">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

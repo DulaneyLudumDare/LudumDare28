@@ -1,8 +1,6 @@
 package com.gregswebserver.ld28.game.level;
 
-import com.gregswebserver.ld28.game.level.tile.PathTile;
-import com.gregswebserver.ld28.game.level.tile.Tile;
-import com.gregswebserver.ld28.game.level.tile.WallTile;
+import com.gregswebserver.ld28.game.level.tile.*;
 import com.gregswebserver.ld28.graphics.screen.ScreenArea;
 import com.gregswebserver.ld28.graphics.sprite.SpriteSheet;
 import com.gregswebserver.ld28.util.Location;
@@ -30,11 +28,11 @@ public class Level {
                 } else if(lvl.pixels[x + y * lvl.size.getX()] == 0xff4f4f4f) {
                     tile = new WallTile(new Vector2i(x, y));
                     tiles.add(tile);
-                } else if(lvl.pixels[x + y * lvl.size.getX()] == 0xff4f4f4f) {
-                    tile = new WallTile(new Vector2i(x, y));
+                } else if(lvl.pixels[x + y * lvl.size.getX()] == 0xffffff00) {
+                    tile = new PathLandMarkTile(new Vector2i(x, y));
                     tiles.add(tile);
-                } else if(lvl.pixels[x + y * lvl.size.getX()] == 0xff4f4f4f) {
-                    tile = new WallTile(new Vector2i(x, y));
+                } else if(lvl.pixels[x + y * lvl.size.getX()] == 0xff00ffff) {
+                    tile = new WallLandmarkTile(new Vector2i(x, y));
                     tiles.add(tile);
                 } else {
                     if(x == 0) {
