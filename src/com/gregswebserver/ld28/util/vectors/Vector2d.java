@@ -102,6 +102,14 @@ public class Vector2d extends Vector {
         return y;
     }
 
+    public void setX(double x) {
+        this.x = x;
+    }
+
+    public void setY(double y) {
+        this.y = y;
+    }
+
     public Vector2i toVector2i() {
         return new Vector2i((int) x, (int) y);
     }

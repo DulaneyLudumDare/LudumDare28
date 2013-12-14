@@ -17,6 +17,7 @@ public class Vector2i extends Vector {
     public Vector2i(int x, int y) {
         this.x = x;
         this.y = y;
+
     }
 
     public Vector2i(Vector2i original) {
@@ -100,6 +101,15 @@ public class Vector2i extends Vector {
 
     public int getY() {
         return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public void setX(int x) {
+
+        this.x = x;
     }
 
     public Vector2d toVector2d() {
