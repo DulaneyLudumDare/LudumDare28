@@ -9,6 +9,8 @@ import java.io.IOException;
 
 public class SpriteSheet extends Graphic {
 
+    public static SpriteSheet terrain = new SpriteSheet("/graphics/terrain.png", 256);
+    public static SpriteSheet landmarks = new SpriteSheet("/graphics/landmarks.png", 128);
 
     public SpriteSheet(String path, int size) {
         super(new Vector2i(size));

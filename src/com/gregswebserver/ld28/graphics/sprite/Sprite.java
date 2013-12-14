@@ -5,6 +5,20 @@ import com.gregswebserver.ld28.util.vectors.Vector2i;
 
 public class Sprite extends Graphic {
 
+    //terrain sprites
+    public static Sprite path_flat = new Sprite(new Vector2i(0,0), 32, SpriteSheet.terrain);
+    public static Sprite path_straight = new Sprite(new Vector2i(0,1), 32, SpriteSheet.terrain);
+    public static Sprite path_corner_out = new Sprite(new Vector2i(0,2), 32, SpriteSheet.terrain);
+    public static Sprite path_corner_in = new Sprite(new Vector2i(0,3), 32, SpriteSheet.terrain);
+    public static Sprite wall_flat = new Sprite(new Vector2i(1,0), 32, SpriteSheet.terrain);
+    public static Sprite wall_straight = new Sprite(new Vector2i(1,1), 32, SpriteSheet.terrain);
+    public static Sprite wall_corner_out = new Sprite(new Vector2i(1,2), 32, SpriteSheet.terrain);
+    public static Sprite wall_corner_in = new Sprite(new Vector2i(1,3), 32, SpriteSheet.terrain);
+
+    //landmark sprites
+    public static Sprite landmark_wall = new Sprite(new Vector2i(0,0), 32, SpriteSheet.landmarks);
+    public static Sprite landmark_path = new Sprite(new Vector2i(0,0), 32, SpriteSheet.landmarks);
+
     public Sprite() {
         super(new Vector2i());
         clear();
