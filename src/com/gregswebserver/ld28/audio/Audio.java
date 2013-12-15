@@ -18,13 +18,14 @@ public class Audio {
 
     private AudioInputStream aInStream;
     private Clip clip;
+    private float defaultVolume;
     private FloatControl gainControl;
 
     public Audio(String path) {
         load(path);
     }
 
-    private void load(String path) {
+    public void load(String path) {
         try {
             aInStream = AudioSystem.getAudioInputStream(Audio.class.getResourceAsStream(path));
             clip = AudioSystem.getClip();
@@ -44,20 +45,7 @@ public class Audio {
         clip.start();
     }
 
-    public void play(float dbAdjust) {
-        gainControl.setValue(dbAdjust); //Reduce/raise volume by (float) n decibels.
-        clip.setMicrosecondPosition(0); //i.e. dbAdjust = -10.0f will reduce by 10.0 decibels
-        clip.start();
-    }
-
     public void loop() {
-        clip.setMicrosecondPosition(0);
-        clip.loop(Clip.LOOP_CONTINUOUSLY);
-        clip.start();
-    }
-
-    public void loop(float dbAdjust) {
-        gainControl.setValue(dbAdjust);
         clip.setMicrosecondPosition(0);
         clip.loop(Clip.LOOP_CONTINUOUSLY);
         clip.start();
@@ -67,7 +55,14 @@ public class Audio {
         clip.stop();
     }
 
-    public Clip getClip() {
-        return clip;
+    public void close() {
+        clip.close();
+    }
+
+    public void setVolume(float db) {
+        if(db > -80.0f && db <= 6.0f)
+            gainControl.setValue(db);
+        else
+            gainControl.setValue(0.0f);
     }
 }
