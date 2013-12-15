@@ -25,8 +25,6 @@ public class Main implements Runnable {
     public static void main(String[] args) {
         Main main = new Main();
         main.start();
-        Audio.dripping.setVolume(-10.0f);//reduces by 10 db
-        Audio.dripping.play();
     }
 
     public synchronized void start() {
