@@ -6,10 +6,14 @@ import com.gregswebserver.ld28.graphics.sprite.Sprite;
 import com.gregswebserver.ld28.graphics.sprite.SpriteAnimation;
 import com.gregswebserver.ld28.util.Location;
 import com.gregswebserver.ld28.util.vectors.Vector2d;
+import com.gregswebserver.ld28.util.vectors.Vector2i;
 
 public class Player extends UsesGame {
 
-    public double walkSpeed = 1;
+    public double walkSpeed = 2;
+    public int animSpeed = 6;
+    private int cycleNum = 0;
+    private Sprite sprite;
 
     private Location location;
 
@@ -17,51 +21,43 @@ public class Player extends UsesGame {
         this.location = location;
     }
 
-    public void setMoving(int direction) {
-        switch (direction) {
-            case 1: //north
-                location.setVel(new Vector2d(0, walkSpeed));
-                break;
-            case 2: //east
-                location.setVel(new Vector2d(walkSpeed, 0));
-                break;
-            case 3: //south
-                location.setVel(new Vector2d(0, -walkSpeed));
-                break;
-            case 4: //west
-                location.setVel(new Vector2d(-walkSpeed, 0));
-                break;
-            case 0:
-                location.setVel(new Vector2d());
-        }
+    public void setMoving(Vector2i direction) {
+        location.setVel(new Vector2d(direction.getX(), -direction.getY()).multiply(walkSpeed));
+        location.setRot(location.getVelocity());
     }
 
     public Sprite getSprite() {
+        cycleNum++;
+        if (cycleNum == animSpeed || sprite == null) {
+            cycleNum = 0;
+            return sprite = getNewSprite();
+        } else {
+            return sprite;
+        }
+    }
+
+    public Sprite getNewSprite() {
         if (location.isMoving()) {
-            switch (location.getVelocity().getDirection()) {
-                case 1:
-                    return SpriteAnimation.move_up.iterator().next();
+            switch (location.getRotation().getDirection()) {
                 case 2:
-                    return SpriteAnimation.move_side.iterator().next();
+                    return SpriteAnimation.move_right.next();
                 case 3:
-                    return SpriteAnimation.move_down.iterator().next();
+                    return SpriteAnimation.move_up.next();
                 case 4:
-                    return SpriteAnimation.move_side.iterator().next().flip(0);
+                    return SpriteAnimation.move_left.next();
                 default:
-                    return Sprite.nullSprite;
+                    return SpriteAnimation.move_down.next();
             }
         } else {
-            switch (location.getVelocity().getDirection()) {
-                case 1:
-                    return SpriteAnimation.stop_up.iterator().next();
+            switch (location.getRotation().getDirection()) {
                 case 2:
-                    return SpriteAnimation.stop_side.iterator().next();
+                    return SpriteAnimation.stop_right.next();
                 case 3:
-                    return SpriteAnimation.stop_down.iterator().next();
+                    return SpriteAnimation.stop_up.next();
                 case 4:
-                    return SpriteAnimation.stop_side.iterator().next().flip(0);
+                    return SpriteAnimation.stop_left.next();
                 default:
-                    return Sprite.nullSprite;
+                    return SpriteAnimation.stop_down.next();
             }
         }
     }

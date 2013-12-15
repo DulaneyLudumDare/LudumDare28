@@ -1,23 +1,23 @@
 package com.gregswebserver.ld28.game;
 
-import com.gregswebserver.ld28.graphics.screen.*;
-import com.gregswebserver.ld28.graphics.sprite.Sprite;
+import com.gregswebserver.ld28.graphics.screen.Screen;
+import com.gregswebserver.ld28.graphics.screen.Window;
 import com.gregswebserver.ld28.util.Debug;
-import com.gregswebserver.ld28.util.Location;
 import com.gregswebserver.ld28.util.vectors.Vector2i;
 
 public class Game {
 
-    public final Vector2i size = new Vector2i(640, 480);
+    public final Vector2i size = new Vector2i(512, 288).multiply(2);
 
     public Debug debug;
     public Screen screen;
     public Window window;
 
     private World world;
+
     public Game() {
         debug = new Debug();
-        window = new Window(size);
+        window = new Window(size, 1);
         screen = new Screen(size);
         loadNewGame("tutorial");
     }
@@ -27,7 +27,7 @@ public class Game {
     }
 
     public void update() {
-        world.getActivePlayer().setMoving(window.keyboard.getArrowDir());
+        world.getActivePlayer().setMoving(window.keyboard.getArrows());
         world.getActivePlayer().getLocation().tick();
         screen.clearObjects();
         world.getLevel().render(screen);

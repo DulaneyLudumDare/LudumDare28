@@ -9,13 +9,13 @@ public class Sprite extends Graphic {
 
     //terrain sprites
     public static Sprite path_flat = new Sprite(new Vector2i(0, 0), 32, SpriteSheet.terrain);
-    public static Sprite path_straight = new Sprite(new Vector2i(0, 1), 32, SpriteSheet.terrain);
-    public static Sprite path_corner_out = new Sprite(new Vector2i(0, 2), 32, SpriteSheet.terrain);
-    public static Sprite path_corner_in = new Sprite(new Vector2i(0, 3), 32, SpriteSheet.terrain);
-    public static Sprite wall_flat = new Sprite(new Vector2i(1, 0), 32, SpriteSheet.terrain);
+    public static Sprite path_straight = new Sprite(new Vector2i(1, 0), 32, SpriteSheet.terrain);
+    public static Sprite path_corner_out = new Sprite(new Vector2i(2, 0), 32, SpriteSheet.terrain);
+    public static Sprite path_corner_in = new Sprite(new Vector2i(3, 0), 32, SpriteSheet.terrain);
+    public static Sprite wall_flat = new Sprite(new Vector2i(0, 1), 32, SpriteSheet.terrain);
     public static Sprite wall_straight = new Sprite(new Vector2i(1, 1), 32, SpriteSheet.terrain);
-    public static Sprite wall_corner_out = new Sprite(new Vector2i(1, 2), 32, SpriteSheet.terrain);
-    public static Sprite wall_corner_in = new Sprite(new Vector2i(1, 3), 32, SpriteSheet.terrain);
+    public static Sprite wall_corner_out = new Sprite(new Vector2i(2, 1), 32, SpriteSheet.terrain);
+    public static Sprite wall_corner_in = new Sprite(new Vector2i(3, 1), 32, SpriteSheet.terrain);
 
     //landmark sprites
     public static Sprite landmark_wall = new Sprite(new Vector2i(0, 0), 32, SpriteSheet.landmarks);
@@ -24,10 +24,14 @@ public class Sprite extends Graphic {
     //player sprites
     public static Vector2i playerSize = new Vector2i(32, 64);
 
-    public static Sprite player_stop_side_0 = new Sprite(new Vector2i(0, 0), playerSize, SpriteSheet.player);
-    public static Sprite player_stop_side_1 = new Sprite(new Vector2i(32, 0), playerSize, SpriteSheet.player);
-    public static Sprite player_stop_side_2 = new Sprite(new Vector2i(64, 0), playerSize, SpriteSheet.player);
-    public static Sprite player_stop_side_3 = new Sprite(new Vector2i(96, 0), playerSize, SpriteSheet.player);
+    public static Sprite player_stop_right_0 = new Sprite(new Vector2i(0, 0), playerSize, SpriteSheet.player);
+    public static Sprite player_stop_right_1 = new Sprite(new Vector2i(32, 0), playerSize, SpriteSheet.player);
+    public static Sprite player_stop_right_2 = new Sprite(new Vector2i(64, 0), playerSize, SpriteSheet.player);
+    public static Sprite player_stop_right_3 = new Sprite(new Vector2i(96, 0), playerSize, SpriteSheet.player);
+    public static Sprite player_stop_left_0 = new Sprite(new Vector2i(0, 192), playerSize, SpriteSheet.player);
+    public static Sprite player_stop_left_1 = new Sprite(new Vector2i(32, 192), playerSize, SpriteSheet.player);
+    public static Sprite player_stop_left_2 = new Sprite(new Vector2i(64, 192), playerSize, SpriteSheet.player);
+    public static Sprite player_stop_left_3 = new Sprite(new Vector2i(96, 192), playerSize, SpriteSheet.player);
     public static Sprite player_stop_up_0 = new Sprite(new Vector2i(0, 64), playerSize, SpriteSheet.player);
     public static Sprite player_stop_up_1 = new Sprite(new Vector2i(32, 64), playerSize, SpriteSheet.player);
     public static Sprite player_stop_up_2 = new Sprite(new Vector2i(64, 64), playerSize, SpriteSheet.player);
@@ -37,10 +41,14 @@ public class Sprite extends Graphic {
     public static Sprite player_stop_down_2 = new Sprite(new Vector2i(64, 128), playerSize, SpriteSheet.player);
     public static Sprite player_stop_down_3 = new Sprite(new Vector2i(96, 128), playerSize, SpriteSheet.player);
 
-    public static Sprite player_move_side_0 = new Sprite(new Vector2i(128, 0), playerSize, SpriteSheet.player);
-    public static Sprite player_move_side_1 = new Sprite(new Vector2i(160, 0), playerSize, SpriteSheet.player);
-    public static Sprite player_move_side_2 = new Sprite(new Vector2i(192, 0), playerSize, SpriteSheet.player);
-    public static Sprite player_move_side_3 = new Sprite(new Vector2i(224, 0), playerSize, SpriteSheet.player);
+    public static Sprite player_move_right_0 = new Sprite(new Vector2i(128, 0), playerSize, SpriteSheet.player);
+    public static Sprite player_move_right_1 = new Sprite(new Vector2i(160, 0), playerSize, SpriteSheet.player);
+    public static Sprite player_move_right_2 = new Sprite(new Vector2i(192, 0), playerSize, SpriteSheet.player);
+    public static Sprite player_move_right_3 = new Sprite(new Vector2i(224, 0), playerSize, SpriteSheet.player);
+    public static Sprite player_move_left_0 = new Sprite(new Vector2i(128, 192), playerSize, SpriteSheet.player);
+    public static Sprite player_move_left_1 = new Sprite(new Vector2i(160, 192), playerSize, SpriteSheet.player);
+    public static Sprite player_move_left_2 = new Sprite(new Vector2i(192, 192), playerSize, SpriteSheet.player);
+    public static Sprite player_move_left_3 = new Sprite(new Vector2i(224, 192), playerSize, SpriteSheet.player);
     public static Sprite player_move_up_0 = new Sprite(new Vector2i(128, 64), playerSize, SpriteSheet.player);
     public static Sprite player_move_up_1 = new Sprite(new Vector2i(160, 64), playerSize, SpriteSheet.player);
     public static Sprite player_move_up_2 = new Sprite(new Vector2i(192, 64), playerSize, SpriteSheet.player);
@@ -77,7 +85,7 @@ public class Sprite extends Graphic {
         //Dynamic sprites with varying sizes and start positions.
         super(dim);
         clear();
-        if (start.getQuadrant() == 1 && spritesheet.size.contains(new Vector2i(size).add(dim))) {
+        if (spritesheet.size.contains(new Vector2i(size).add(dim))) {
             for (int y = 0; y < dim.getY(); y++) {
                 for (int x = 0; x < dim.getX(); x++) {
                     int col = spritesheet.pixels[start.getX() + x + (start.getY() + y) * spritesheet.size.getX()];
@@ -85,26 +93,6 @@ public class Sprite extends Graphic {
                 }
             }
         }
-    }
-
-    public Sprite flip(int axis) {
-        Vector2i newSize = new Vector2i(size);
-        Sprite out = new Sprite(newSize);
-        for (int y = 0; y < size.getY(); y++) {
-            for (int x = 0; x < size.getX(); x++) {
-                Vector2i thisPixel = new Vector2i(x, y);
-                Vector2i newPixel = new Vector2i();
-                switch (axis % 2) {
-                    case 0:
-                        newPixel = new Vector2i(newSize.getX() - thisPixel.getX(), thisPixel.getY());
-                        break;
-                    case 1:
-                        newPixel = new Vector2i(newSize.getX(), newSize.getY() - thisPixel.getY());
-                }
-                out.setPixel(newPixel, getPixel(thisPixel));
-            }
-        }
-        return out;
     }
 
     public Sprite rotate(int turns) {

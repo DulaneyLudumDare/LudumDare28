@@ -96,4 +96,8 @@ public class Vector2d extends Vector<Double> {
     public Vector2i toVector2i() {
         return new Vector2i(x.intValue(), y.intValue());
     }
+
+    public Vector2d unit() {
+        return new Vector2d(this).multiply(1 / length());
+    }
 }

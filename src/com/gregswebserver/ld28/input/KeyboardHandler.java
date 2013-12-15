@@ -1,6 +1,7 @@
 package com.gregswebserver.ld28.input;
 
 import com.gregswebserver.ld28.game.UsesGame;
+import com.gregswebserver.ld28.util.vectors.Vector2i;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -14,7 +15,8 @@ public class KeyboardHandler extends UsesGame implements KeyListener {
     }
 
     public void keyPressed(KeyEvent e) {
-        keys.add("" + e.getKeyCode());
+        if (!isPressed(e.getKeyCode()))
+            keys.add("" + e.getKeyCode());
     }
 
     public void keyReleased(KeyEvent e) {
@@ -25,11 +27,12 @@ public class KeyboardHandler extends UsesGame implements KeyListener {
         return keys.contains("" + key);
     }
 
-    public int getArrowDir() {
-        if (isPressed(KeyEvent.VK_UP) || isPressed(KeyEvent.VK_W)) return 1;
-        else if (isPressed(KeyEvent.VK_RIGHT) || isPressed(KeyEvent.VK_D)) return 2;
-        else if (isPressed(KeyEvent.VK_DOWN) || isPressed(KeyEvent.VK_S)) return 3;
-        else if (isPressed(KeyEvent.VK_LEFT) || isPressed(KeyEvent.VK_A)) return 4;
-        else return 0;
+    public Vector2i getArrows() {
+        Vector2i sum = new Vector2i();
+        if (isPressed(KeyEvent.VK_UP) || isPressed(KeyEvent.VK_W)) sum.add(new Vector2i(0,1));
+        if (isPressed(KeyEvent.VK_RIGHT) || isPressed(KeyEvent.VK_D)) sum.add(new Vector2i(1,0));
+        if (isPressed(KeyEvent.VK_DOWN) || isPressed(KeyEvent.VK_S)) sum.add(new Vector2i(0,-1));
+        if (isPressed(KeyEvent.VK_LEFT) || isPressed(KeyEvent.VK_A)) sum.add(new Vector2i(-1,0));
+        return sum;
     }
 }

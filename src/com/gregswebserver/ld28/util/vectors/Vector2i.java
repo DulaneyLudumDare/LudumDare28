@@ -25,7 +25,7 @@ public class Vector2i extends Vector<Integer> {
         return x * x + y * y;
     }
 
-    public Vector2i scale(int scale) {
+    public Vector2i multiply(int scale) {
         this.x *= scale;
         this.y *= scale;
         return this;
@@ -95,5 +95,9 @@ public class Vector2i extends Vector<Integer> {
             default:
                 return false;
         }
+    }
+
+    public Vector2d unit() {
+        return toVector2d().multiply(1 / length());
     }
 }

@@ -15,6 +15,7 @@ public class Window extends Canvas {
     public KeyboardHandler keyboard = new KeyboardHandler();
 
     public final Vector2i size;
+    public final int scale;
     public final String title = "Sight";
     private String suffix = "";
 
@@ -22,12 +23,13 @@ public class Window extends Canvas {
     private int[] pixels;
     private JFrame frame;
 
-    public Window(Vector2i size) {
+    public Window(Vector2i size, int scale) {
+        this.scale = scale;
         this.size = size;
         image = new BufferedImage(size.getX(), size.getY(), BufferedImage.TYPE_INT_RGB);
         pixels = ((DataBufferInt) image.getRaster().getDataBuffer()).getData();
         frame = new JFrame();
-        setPreferredSize(new Dimension(size.getX(), size.getY()));
+        setPreferredSize(new Dimension(size.getX() * scale, size.getY() * scale));
         addKeyListener(keyboard);
         frame.setResizable(false);
         updateWindowText();

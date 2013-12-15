@@ -16,7 +16,7 @@ public class Main implements Runnable {
 
     public Main() {
         isRunning = false;
-        updateTime = new Clock(30); // 60 updates per second
+        updateTime = new Clock(60); // 60 updates per second
         frameTime = new Clock(1); // 1 tick per second
         updates = 0;
         frames = 0;

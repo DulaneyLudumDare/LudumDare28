@@ -4,11 +4,15 @@ import com.gregswebserver.ld28.util.vectors.Vector2d;
 
 public class Location implements Tickable {
 
+    private Vector2d rotation;
+    private Vector2d rVelocity;
     private Vector2d position;
     private Vector2d velocity;
     private Vector2d acceleration;
 
     public Location() {
+        rotation = new Vector2d();
+        rVelocity = new Vector2d();
         position = new Vector2d();
         velocity = new Vector2d();
         acceleration = new Vector2d();
@@ -18,23 +22,22 @@ public class Location implements Tickable {
         this.position = position;
         velocity = new Vector2d();
         acceleration = new Vector2d();
-    }
-
-    public Location(Vector2d position, Vector2d velocity) {
-        this.position = position;
-        this.velocity = velocity;
-        acceleration = new Vector2d();
-    }
-
-    public Location(Vector2d position, Vector2d velocity, Vector2d acceleration) {
-        this.position = position;
-        this.velocity = velocity;
-        this.acceleration = acceleration;
+        rotation = new Vector2d();
+        rVelocity = new Vector2d();
     }
 
     public void tick() {
+        rotation.add(rVelocity);
         position.add(velocity);
         velocity.add(acceleration);
+    }
+
+    public void setRot(Vector2d in) {
+        this.rotation = in;
+    }
+
+    public void setRVel(Vector2d in) {
+        this.rVelocity = in;
     }
 
     public void setPos(Vector2d in) {
@@ -47,6 +50,14 @@ public class Location implements Tickable {
 
     public void setAcc(Vector2d in) {
         this.acceleration = in;
+    }
+
+    public Vector2d getRotation() {
+        return rotation;
+    }
+
+    public Vector2d getRVelocity() {
+        return rVelocity;
     }
 
     public Vector2d getPosition() {

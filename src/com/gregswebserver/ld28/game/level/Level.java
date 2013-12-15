@@ -7,6 +7,7 @@ import com.gregswebserver.ld28.graphics.screen.ScreenObject;
 import com.gregswebserver.ld28.graphics.sprite.Sprite;
 import com.gregswebserver.ld28.graphics.sprite.SpriteSheet;
 import com.gregswebserver.ld28.util.Location;
+import com.gregswebserver.ld28.util.vectors.Vector2d;
 import com.gregswebserver.ld28.util.vectors.Vector2i;
 
 import java.util.HashMap;
@@ -60,23 +61,27 @@ public class Level extends UsesGame {
             HashMap<Vector2i, Tile> children = getNeighbors(parent);
             int type = 0;
             int rotation = 0;
-            Vector2i cumulative = new Vector2i();
+            Vector2d cumulative = new Vector2d();
             for (Vector2i child : children.keySet()) {
-                cumulative.add(child);
+                cumulative.add(child.unit());
             }
             switch (children.size()) {
                 case 3:
                     type = 2;
-                    rotation = cumulative.getQuadrant();
+                    rotation = cumulative.getQuadrant() - 1;
                     break;
                 case 5:
                 case 6:
                     type = 1;
-                    rotation = cumulative.getDirection();
+                    rotation = 4 - cumulative.getDirection();
                     break;
                 case 7:
                     type = 3;
-                    rotation = cumulative.getQuadrant();
+                    rotation = cumulative.getQuadrant() - 1;
+                    break;
+                default:
+                    type = 0;
+                    rotation = 0;
             }
             setSprite(parent, type, rotation);
         }
@@ -117,7 +122,7 @@ public class Level extends UsesGame {
     private HashMap<Vector2i, Tile> getNeighbors(Tile parent) {
 
         HashMap<Vector2i, Tile> neighbors = new HashMap<>();
-        for (int i = -1; i <= 8; i++) {
+        for (int i = 0; i <= 8; i++) {
             if (i == 4) continue;
             Vector2i childPosition = new Vector2i((i / 3) - 1, (i % 3) - 1);
             Tile child = tiles.get(new Vector2i(parent.getPosition()).add(childPosition));
@@ -140,7 +145,7 @@ public class Level extends UsesGame {
     public void render(Screen screen) {
         for (Tile tile : tiles.values()) {
             Vector2i location = tile.getPosition();
-            screen.addObject("tile" + location.toString(), new ScreenObject(new Vector2i(location).scale(32), tile.getSprite(), 0));
+            screen.addObject("tile" + location.toString(), new ScreenObject(new Vector2i(location).multiply(32), tile.getSprite(), 0));
         }
     }
 }
