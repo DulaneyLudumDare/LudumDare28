@@ -2,19 +2,27 @@ package com.gregswebserver.ld28.game.level;
 
 import com.gregswebserver.ld28.game.level.tile.*;
 import com.gregswebserver.ld28.graphics.screen.ScreenArea;
+import com.gregswebserver.ld28.graphics.screen.ScreenObject;
+import com.gregswebserver.ld28.graphics.sprite.Sprite;
 import com.gregswebserver.ld28.graphics.sprite.SpriteSheet;
 import com.gregswebserver.ld28.util.Location;
 import com.gregswebserver.ld28.util.vectors.Vector2i;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Level {
-    private ArrayList<Tile> tiles = new ArrayList<>();
+
+    public static int pathColor = 0xff008000;
+    public static int wallColor = 0xff4f4f4f;
+    public static int pathLandmarkColor = 0xffffff00;
+    public static int wallLandmarkColor = 0xff00ffff;
+
+    private HashMap<Vector2i, Tile> tiles = new HashMap<>();
     private Vector2i size;
 
     public Level(String level) {
         load("/levels/" + level + ".png");
-        finalizeOrentations();
+        finalizeOrientations();
     }
 
     private void load(String path) {
@@ -22,14 +30,16 @@ public class Level {
 
         for (int y = 0; y < lvl.size.getX(); y++) {
             for (int x = 0; x < lvl.size.getY(); x++) {
-                if (lvl.pixels[x + y * lvl.size.getX()] == 0xff008000)
-                    tiles.add(new PathTile(new Vector2i(x, y)));
-                else if (lvl.pixels[x + y * lvl.size.getX()] == 0xff4f4f4f)
-                    tiles.add(new WallTile(new Vector2i(x, y)));
-                else if (lvl.pixels[x + y * lvl.size.getX()] == 0xffffff00)
-                    tiles.add(new PathLandmarkTile(new Vector2i(x, y)));
-                else if (lvl.pixels[x + y * lvl.size.getX()] == 0xff00ffff)
-                    tiles.add(new WallLandmarkTile(new Vector2i(x, y)));
+                Vector2i location = new Vector2i(x, y);
+                int color = lvl.getPixel(location);
+                if (color == pathColor)
+                    tiles.put(location, new PathTile(location));
+                else if (color == wallColor)
+                    tiles.put(location, new WallTile(location));
+                else if (color == pathLandmarkColor)
+                    tiles.put(location, new PathLandmarkTile(location));
+                else if (color == wallLandmarkColor)
+                    tiles.put(location, new WallLandmarkTile(location));
                 else {
                     if (x == 0) {
                         size.setY(y);
@@ -41,46 +51,75 @@ public class Level {
         }
     }
 
-    private void finalizeOrentations() {
-        for (int y = 0; y < size.getY(); y++) {
-            for (int x = 0; x < size.getX(); x++) {
-                if(getNeighors(x, y).get(0) == null) {
+    private void finalizeOrientations() {
+        for (Tile parent : tiles.values()) {
+            HashMap<Vector2i, Tile> children = getNeighbors(parent);
+            int type = 0;
+            int rotation = 0;
+            Vector2i cumulative = new Vector2i();
+            for (Vector2i child : children.keySet()) {
+                cumulative.add(child);
+            }
+            switch (children.size()) {
+                case 3:
+                    type = 2;
+                    rotation = cumulative.getQuadrant();
+                    break;
+                case 5:
+                case 6:
+                    type = 1;
+                    rotation = cumulative.getDirection();
+                    break;
+                case 7:
+                    type = 3;
+                    rotation = cumulative.getQuadrant();
+            }
+            setSprite(parent, type, rotation);
+        }
+    }
 
-                } else if(getNeighors(x, y).get(0) instanceof PathTile) {
-
-                } else if(getNeighors(x, y).get(0) instanceof WallTile) {
-
-                } else if(getNeighors(x, y).get(0) instanceof PathLandmarkTile) {
-
-                } else if(getNeighors(x, y).get(0) instanceof WallTile) {
-
-                }
+    private void setSprite(Tile tile, int type, int rotation) {
+        if (tile instanceof WallTile) {
+            switch (type) {
+                case 0:
+                    tile.setSprite(Sprite.wall_flat);
+                    break;
+                case 1:
+                    tile.setSprite(Sprite.wall_straight.rotate(rotation));
+                    break;
+                case 2:
+                    tile.setSprite(Sprite.wall_corner_out.rotate(rotation));
+                    break;
+                case 3:
+                    tile.setSprite(Sprite.wall_corner_in.rotate(rotation));
+            }
+        } else if (tile instanceof PathTile) {
+            switch (type) {
+                case 0:
+                    tile.setSprite(Sprite.path_flat);
+                    break;
+                case 1:
+                    tile.setSprite(Sprite.path_straight.rotate(rotation));
+                    break;
+                case 2:
+                    tile.setSprite(Sprite.path_corner_out.rotate(rotation));
+                    break;
+                case 3:
+                    tile.setSprite(Sprite.path_corner_in.rotate(rotation));
             }
         }
     }
 
-    private ArrayList<Tile> getNeighors(int x, int y) {
-        ArrayList<Tile> neighbors = new ArrayList<>();
-        if(y > 0)
-            neighbors.add(tiles.get(x + (y - 1) * size.getX()));
-        else
-            neighbors.add(null);
-
-        if(x < size.getX() - 1)
-            neighbors.add(tiles.get((x + 1) + y * size.getX()));
-        else
-            neighbors.add(null);
-
-        if(y < size.getY() - 1)
-            neighbors.add(tiles.get(x + (y + 1) * size.getX()));
-        else
-            neighbors.add(null);
-
-        if(x > 0)
-            neighbors.add(tiles.get((x - 1) + y * size.getX()));
-        else
-            neighbors.add(null);
-
+    private HashMap<Vector2i, Tile> getNeighbors(Tile parent) {
+        HashMap<Vector2i, Tile> neighbors = new HashMap<>();
+        for (int i = -1; i <= 8; i++) {
+            if (i == 4) continue;
+            Vector2i childPosition = new Vector2i((i / 3) - 1, (i % 3) - 1);
+            Tile child = tiles.get(new Vector2i(parent.getPosition()).add(childPosition));
+            if ((child instanceof WallTile && parent instanceof WallTile) || (child instanceof PathTile && parent instanceof PathTile)) {
+                neighbors.put(childPosition, child);
+            }
+        }
         return neighbors;
     }
 
@@ -89,6 +128,11 @@ public class Level {
     }
 
     public ScreenArea getScreenArea() {
-        return null;
+        ScreenArea area = new ScreenArea(size.scale(32), new Location(), 0);
+        for (Tile tile : tiles.values()) {
+            Vector2i location = tile.getPosition();
+            area.addObject("tile" + location.toString(), new ScreenObject(new Location(location.toVector2d()), tile.getSprite(), 0));
+        }
+        return area;
     }
 }

@@ -15,6 +15,14 @@ public abstract class Graphic extends UsesGame {
         pixels = new int[size.getX() * size.getY()];
     }
 
+    public void setPixel(Vector2i pos, int color) {
+        pixels[pos.getX() + pos.getY() * size.getX()] = color;
+    }
+
+    public int getPixel(Vector2i pos) {
+        return pixels[pos.getX() + pos.getY() * size.getX()];
+    }
+
     public void clear() {
         for (int i = 0; i < pixels.length; i++) {
             pixels[i] = transparency;

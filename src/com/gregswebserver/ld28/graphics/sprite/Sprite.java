@@ -85,14 +85,6 @@ public class Sprite extends Graphic {
         }
     }
 
-    public void setPixel(Vector2i pos, int color) {
-        pixels[pos.getX() + pos.getY() * size.getX()] = color;
-    }
-
-    public int getPixel(Vector2i pos) {
-        return pixels[pos.getX() + pos.getY() * size.getX()];
-    }
-
     public Sprite flip(int axis) {
         Vector2i newSize = new Vector2i(size);
         Sprite out = new Sprite(newSize);
@@ -100,7 +92,7 @@ public class Sprite extends Graphic {
             for (int x = 0; x < size.getX(); x++) {
                 Vector2i thisPixel = new Vector2i(x, y);
                 Vector2i newPixel = new Vector2i();
-                switch (axis) {
+                switch (axis%2) {
                     case 0:
                         newPixel = new Vector2i(newSize.getX() - thisPixel.getX(), thisPixel.getY());
                         break;
@@ -120,7 +112,7 @@ public class Sprite extends Graphic {
             for (int x = 0; x < size.getX(); x++) {
                 Vector2i thisPixel = new Vector2i(x, y);
                 Vector2i newPixel = new Vector2i();
-                switch (turns) {
+                switch (turns%4) {
                     case 0:
                         newPixel = new Vector2i(thisPixel);
                         break;
