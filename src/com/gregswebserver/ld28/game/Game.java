@@ -84,17 +84,13 @@ public class Game {
     }
 
     public void update() {
-        long time = System.currentTimeMillis();
         world.getActivePlayer().setMoving(keyboard.getArrowDir());
         screen.addArea("player", world.getActivePlayer().getScreenArea());
         screen.addArea("level", world.getLevelRender());
         screen.update();
-        debug.printDebug(5, "Updating " + (System.currentTimeMillis() - time) + " ms");
     }
 
     public void render() {
-        long time = System.currentTimeMillis();
         window.render(screen);
-        debug.printDebug(5, "Rendering " + (System.currentTimeMillis() - time) + " ms");
     }
 }

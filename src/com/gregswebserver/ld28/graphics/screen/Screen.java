@@ -22,12 +22,9 @@ public class Screen extends LayeredGraphic {
         ArrayList<String> parsedList = new ArrayList<>();
         int activeLayer = 0;
         while (parsedList.size() < areas.size()) {
-            System.out.println("layer " + activeLayer);
             for (String name : areas.keySet()) {
                 ScreenArea area = areas.get(name);
                 if (area.getLayer() == activeLayer && !parsedList.contains(name)) {
-                    System.out.println(" area " + name);
-                    System.out.println(" size " + area.size.toString());
                     renderImage(area.getLocation().getPosition().toVector2i(), area);
                     parsedList.add(name);
                 }
