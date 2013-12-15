@@ -73,10 +73,10 @@ public class Vector2d extends Vector {
     }
 
     public int getDirection() {
-        if (x == 0 && y > 0) return 1;
-        if (y == 0 && x > 0) return 2;
-        if (x == 0 && y < 0) return 3;
-        if (y == 0 && x < 0) return 4;
+        if (Math.abs(x) < Math.abs(y) && y > 0) return 1;
+        if (Math.abs(x) > Math.abs(y) && x > 0) return 2;
+        if (Math.abs(x) < Math.abs(y) && y < 0) return 3;
+        if (Math.abs(x) > Math.abs(y) && x < 0) return 4;
         return 0;
     }
 
