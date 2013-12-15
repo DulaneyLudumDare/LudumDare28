@@ -18,12 +18,14 @@ public class Screen extends Canvas {
     public final String title = "Sight";
     private String suffix = "";
 
-    private BufferedImage image = new BufferedImage(size.getX(), size.getY(), BufferedImage.TYPE_INT_RGB);
-    private int[] pixels = ((DataBufferInt) image.getRaster().getDataBuffer()).getData();
+    private BufferedImage image;
+    private int[] pixels;
     private JFrame frame;
     private HashMap<String, ScreenArea> areas;
 
     public Screen() {
+        image = new BufferedImage(size.getX(), size.getY(), BufferedImage.TYPE_INT_RGB);
+        pixels = ((DataBufferInt) image.getRaster().getDataBuffer()).getData();
         frame = new JFrame();
         setPreferredSize(new Dimension(size.getX(), size.getY()));
         frame.setResizable(false);

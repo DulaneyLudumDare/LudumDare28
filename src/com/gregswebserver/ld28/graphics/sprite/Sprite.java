@@ -119,14 +119,15 @@ public class Sprite extends Graphic {
                         newPixel = new Vector2i(thisPixel);
                         break;
                     case 1:
-                        newPixel = new Vector2i(newSize.getX() - thisPixel.getY(), thisPixel.getX());
+                        newPixel = new Vector2i(size.getY() - 1 - thisPixel.getY(), thisPixel.getX());
                         break;
                     case 2:
-                        newPixel = new Vector2i(newSize.getX() - thisPixel.getX(), newSize.getY() - thisPixel.getY());
+                        newPixel = new Vector2i(size.getX() - 1 - thisPixel.getX(), size.getY() - 1 - thisPixel.getY());
                         break;
                     case 3:
-                        newPixel = new Vector2i(thisPixel.getY(), newSize.getY() - thisPixel.getX());
+                        newPixel = new Vector2i(thisPixel.getY(), size.getX() - 1 - thisPixel.getX());
                         break;
+
                 }
                 out.setPixel(newPixel, getPixel(thisPixel));
             }

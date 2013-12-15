@@ -66,12 +66,4 @@ public class Location implements Tickable {
         if (Math.abs(velocity.getY()) > 0.0000001) return false;
         return true;
     }
-
-    public int getX() {
-        return (int) position.getX();
-    }
-
-    public int getY() {
-        return (int) position.getY();
-    }
 }

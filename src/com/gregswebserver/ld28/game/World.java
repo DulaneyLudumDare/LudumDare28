@@ -1,6 +1,7 @@
 package com.gregswebserver.ld28.game;
 
 import com.gregswebserver.ld28.game.level.Level;
+import com.gregswebserver.ld28.graphics.screen.ScreenArea;
 
 import java.util.HashMap;
 
