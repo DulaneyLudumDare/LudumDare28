@@ -49,7 +49,7 @@ public class Main implements Runnable {
             game.render();
             frames++;
             if (frameTime.getTimer()) {
-                game.screen.setWindowText("UPS: " + updates + " FPS: " + frames);
+                game.window.setWindowText("UPS: " + updates + " FPS: " + frames);
                 updates = frames = 0;
                 frameTime.resetTimer();
             }

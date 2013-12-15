@@ -14,10 +14,12 @@ public class KeyboardHandler extends UsesGame implements KeyListener {
     }
 
     public void keyPressed(KeyEvent e) {
+        System.out.println("Pressed " + e.getKeyChar() + " " + e.getKeyCode());
         keys.add(e.getKeyCode());
     }
 
     public void keyReleased(KeyEvent e) {
+        System.out.println("Released " + e.getKeyChar() + " " + e.getKeyCode());
         keys.remove(e.getKeyCode());
     }
 
