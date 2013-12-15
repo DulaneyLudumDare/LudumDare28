@@ -1,9 +1,6 @@
 package com.gregswebserver.ld28.game;
 
-import com.gregswebserver.ld28.graphics.screen.Scene;
-import com.gregswebserver.ld28.graphics.screen.Screen;
-import com.gregswebserver.ld28.graphics.screen.ScreenArea;
-import com.gregswebserver.ld28.graphics.screen.ScreenObject;
+import com.gregswebserver.ld28.graphics.screen.*;
 import com.gregswebserver.ld28.graphics.sprite.Sprite;
 import com.gregswebserver.ld28.input.KeyboardHandler;
 import com.gregswebserver.ld28.util.Debug;
@@ -12,8 +9,11 @@ import com.gregswebserver.ld28.util.vectors.Vector2i;
 
 public class Game {
 
+    public final Vector2i size = new Vector2i(640, 480);
+
     public Debug debug;
     public Screen screen;
+    public Window window;
 
     private KeyboardHandler keyboard;
     private World world;
@@ -21,17 +21,16 @@ public class Game {
     private ScreenArea title;
     private ScreenArea vignette;
 
-    private Scene menuScene;
-    private Scene loadScene;
-    private Scene hudScene;
-    private Scene settingsScene;
-    private Scene introScene;
-    private Scene cutScene;
     private Scene titleScene;
+    private Scene menuScene;
+    private Scene introScene;
+    private Scene loadScene;
+    private Scene settingsScene;
 
     public Game() {
         debug = new Debug();
-        screen = new Screen();
+        window = new Window(size);
+        screen = new Screen(size);
         keyboard = new KeyboardHandler();
 
         title = new ScreenArea(new Vector2i(128, 32), new Location(), 0);
@@ -40,6 +39,11 @@ public class Game {
         vignette.addObject("vignetteSprite", new ScreenObject(new Location(), Sprite.nullSprite, 0));
 
         //TODO fix all the null sprites in here
+
+        titleScene = new Scene();
+        {
+            titleScene.addArea("title", title);
+        }
 
         menuScene = new Scene();
         {
@@ -50,28 +54,6 @@ public class Game {
             menuScene.addArea("options", optionList);
         }
 
-        loadScene = new Scene();
-        {
-            ScreenArea message = new ScreenArea(new Vector2i(128, 32), new Location(), 0);
-            message.addObject("loading", new ScreenObject(new Location(), Sprite.nullSprite, 0));
-            loadScene.addArea("loadMessage", message);
-        }
-
-        hudScene = new Scene();
-        {
-            hudScene.addArea("vignette", vignette);
-
-            ScreenArea timer = new ScreenArea(new Vector2i(128, 32), new Location(), 3);
-            timer.addObject("number", new ScreenObject(new Location(), Sprite.nullSprite, 1));
-            hudScene.addArea("timer", timer);
-        }
-
-        settingsScene = new Scene();
-        {
-            ScreenArea title = new ScreenArea(new Vector2i(256, 32), new Location(), 0);
-            settingsScene.addArea("title", title);
-        }
-
         introScene = new Scene();
         {
             introScene.addArea("title", title);
@@ -80,15 +62,17 @@ public class Game {
             introScene.addArea("bullets", bulletList);
         }
 
-        cutScene = new Scene();
+        loadScene = new Scene();
         {
-//            cutScene.addArea("world", world.getLevel().getScreenArea());
-//            cutScene.addArea("player", world.getActivePlayer().getScreenArea());
+            ScreenArea message = new ScreenArea(new Vector2i(128, 32), new Location(), 0);
+            message.addObject("loading", new ScreenObject(new Location(), Sprite.nullSprite, 0));
+            loadScene.addArea("loadMessage", message);
         }
 
-        titleScene = new Scene();
+        settingsScene = new Scene();
         {
-            titleScene.addArea("title", title);
+            ScreenArea title = new ScreenArea(new Vector2i(256, 32), new Location(), 0);
+            settingsScene.addArea("title", title);
         }
 
         loadNewGame("tutorial");
@@ -96,19 +80,21 @@ public class Game {
 
     public void loadNewGame(String name) {
         world = new World(name, 3);
-        hudScene.addArea("world", world.getLevel().getScreenArea());
-        screen.loadScene(hudScene);
         update();
     }
 
     public void update() {
+        long time = System.currentTimeMillis();
         world.getActivePlayer().setMoving(keyboard.getArrowDir());
-//        screen.addArea("world", world.getLevel().getScreenArea());
         screen.addArea("player", world.getActivePlayer().getScreenArea());
+        screen.addArea("level", world.getLevelRender());
         screen.update();
+        debug.printDebug(5, "Updating " + (System.currentTimeMillis() - time) + " ms");
     }
 
     public void render() {
-        screen.render();
+        long time = System.currentTimeMillis();
+        window.render(screen);
+        debug.printDebug(5, "Rendering " + (System.currentTimeMillis() - time) + " ms");
     }
 }

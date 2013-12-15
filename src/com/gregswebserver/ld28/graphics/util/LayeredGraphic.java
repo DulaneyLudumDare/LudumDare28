@@ -12,25 +12,27 @@ public abstract class LayeredGraphic extends Graphic {
         super(size);
         this.location = location;
         this.layer = layer;
+        clear();
     }
 
     public int getLayer() {
         return layer;
     }
 
-    public Vector2i getPosition() {
-        return location.getPosition().toVector2i();
+    public Location getLocation() {
+        return location;
     }
 
     protected void renderImage(Vector2i position, Graphic image) {
         for (int x = 0; x < image.size.getX(); x++) {
-            int xx = position.getX() + x;
             for (int y = 0; y < image.size.getY(); y++) {
-                int yy = position.getY() + y;
-                if (xx >= position.getX() || xx < 0 || yy >= position.getY() || yy < 0)
-                    continue;
-                int col = image.pixels[x + (y * image.size.getX())];
-                pixels[xx + (yy * size.getX())] = col;
+                Vector2i thisPixel = new Vector2i(x, y);
+                Vector2i newPixel = new Vector2i(thisPixel).add(position);
+                int color = image.getPixel(thisPixel);
+                if (color != transparency) {
+                    if (new Vector2i(this.size).subtract(new Vector2i(1, 1)).contains(newPixel))
+                        setPixel(newPixel, color);
+                }
             }
         }
     }

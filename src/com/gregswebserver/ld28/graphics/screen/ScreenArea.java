@@ -26,7 +26,7 @@ public class ScreenArea extends LayeredGraphic implements Tickable {
             for (String name : objects.keySet()) {
                 ScreenObject object = objects.get(name);
                 if (object.getLayer() == activeLayer && !parsedList.contains(name)) {
-                    renderImage(object.getPosition(), object);
+                    renderImage(object.getLocation().getPosition().toVector2i(), object);
                     parsedList.add(name);
                 }
             }

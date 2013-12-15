@@ -85,13 +85,13 @@ public class Vector2i extends Vector<Integer> {
         if (getQuadrant() != in.getQuadrant()) return false;
         switch (in.getQuadrant()) {
             case 1:
-                return getY() > in.getY() && getX() > in.getX();
+                return getY() >= in.getY() && getX() >= in.getX();
             case 2:
-                return getY() > in.getY() && getX() < in.getX();
+                return getY() >= in.getY() && getX() <= in.getX();
             case 3:
-                return getY() < in.getY() && getX() < in.getX();
+                return getY() <= in.getY() && getX() <= in.getX();
             case 4:
-                return getY() < in.getY() && getX() > in.getX();
+                return getY() <= in.getY() && getX() >= in.getX();
             default:
                 return false;
         }

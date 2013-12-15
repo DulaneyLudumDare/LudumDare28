@@ -21,6 +21,7 @@ public class Player extends UsesGame {
     public ScreenArea getScreenArea() {
         ScreenArea player = new ScreenArea(new Vector2i(32, 64), new Location(), 1);
         player.addObject("player", new ScreenObject(location, getSprite(), 0));
+        player.render();
         return player;
     }
 
@@ -67,5 +68,9 @@ public class Player extends UsesGame {
                     return Sprite.nullSprite;
             }
         }
+    }
+
+    public Location getLocation(){
+        return location;
     }
 }

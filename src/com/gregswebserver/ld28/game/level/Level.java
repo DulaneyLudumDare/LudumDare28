@@ -46,9 +46,10 @@ public class Level extends UsesGame {
                 else {
                     if (x == 0) {
                         size.setY(y);
-                        break;
+                        return;
                     }
                     size.setX(x);
+                    break;
                 }
             }
         }

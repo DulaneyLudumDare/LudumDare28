@@ -25,7 +25,7 @@ public abstract class Graphic extends UsesGame {
 
     public void clear() {
         for (int i = 0; i < pixels.length; i++) {
-            pixels[i] = transparency;
+            pixels[i] = transparency-1;
         }
     }
 }
