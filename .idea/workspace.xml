@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cd74f9fb-4584-4eca-ad46-64e911a0ad4a" name="Default" comment="added wav files to res&#10;">
+    <list default="true" id="cd74f9fb-4584-4eca-ad46-64e911a0ad4a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/audio/switch_player.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/audio/trumpet.wav" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gregswebserver/ld28/audio/Audio.java" afterPath="$PROJECT_DIR$/src/com/gregswebserver/ld28/audio/Audio.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -70,7 +72,7 @@
       <file leaf-file-name="planning.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/planning.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="12" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="935">
+            <state line="30" column="12" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="935">
               <folding />
             </state>
           </provider>
@@ -79,8 +81,10 @@
       <file leaf-file-name="SpriteSheet.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/sprite/SpriteSheet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="21" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="595">
-              <folding />
+            <state line="12" column="21" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -124,7 +128,7 @@
       <file leaf-file-name="Level.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/Level.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="135" column="23" selection-start="5031" selection-end="5031" vertical-scroll-proportion="0.0" vertical-offset="1819" max-vertical-offset="2431">
+            <state line="135" column="23" selection-start="5031" selection-end="5031" vertical-scroll-proportion="0.0" vertical-offset="2295" max-vertical-offset="2601">
               <folding />
             </state>
           </provider>
@@ -133,8 +137,11 @@
       <file leaf-file-name="Audio.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/audio/Audio.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="61" selection-start="723" selection-end="723" vertical-scroll-proportion="0.22222222" vertical-offset="85" max-vertical-offset="697">
-              <folding />
+            <state line="16" column="103" selection-start="1095" selection-end="1095" vertical-scroll-proportion="0.41666666" vertical-offset="0" max-vertical-offset="1326">
+              <folding>
+                <element signature="e#2567#2568#0" expanded="true" />
+                <element signature="e#2594#2595#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -218,6 +225,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -233,186 +241,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="LudumDare28" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LudumDare28" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LudumDare28" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ld28" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LudumDare28" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LudumDare28" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ld28" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LudumDare28" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LudumDare28" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ld28" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vectors" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LudumDare28" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LudumDare28" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ld28" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="input" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LudumDare28" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LudumDare28" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ld28" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="graphics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LudumDare28" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LudumDare28" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ld28" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LudumDare28" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LudumDare28" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ld28" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="level" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LudumDare28" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LudumDare28" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ld28" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="audio" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -450,7 +278,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -527,19 +354,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -565,6 +379,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -698,7 +525,11 @@
       <created>1387084923156</created>
       <updated>1387084923156</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added wav files to res&#10;">
+      <created>1387085111154</created>
+      <updated>1387085111154</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -715,7 +546,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.3275862" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -727,8 +558,8 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Metrics" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="UnknownFeatures">
@@ -753,7 +584,8 @@
     <MESSAGE value="&#10;" />
     <MESSAGE value="0.1 Game engine ported from GameAiSim code&#10;" />
     <MESSAGE value="added wav files to res" />
-    <option name="LAST_COMMIT_MESSAGE" value="added wav files to res" />
+    <MESSAGE value="added wav files to res&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="added wav files to res&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -778,7 +610,70 @@
     <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/sprite/SpriteSheet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="21" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="595">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/util/Tickable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="204">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/util/vectors/Vector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="952">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="587" selection-end="587" vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1071">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/game/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="25" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="2040">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/Level.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="135" column="23" selection-start="5031" selection-end="5031" vertical-scroll-proportion="0.0" vertical-offset="2295" max-vertical-offset="2601">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/audio/Audio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="61" selection-start="723" selection-end="723" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="765">
+          <folding>
+            <element signature="e#2567#2568#0" expanded="true" />
+            <element signature="e#2594#2595#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/planning.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="12" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="935">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/sprite/SpriteSheet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="21" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="595">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -827,7 +722,9 @@
     <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/sprite/SpriteSheet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="21" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="595">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -862,7 +759,9 @@
     <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/sprite/SpriteSheet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="21" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="595">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -975,7 +874,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="55" column="0" selection-start="1364" selection-end="1364" vertical-scroll-proportion="0.0" vertical-offset="417" max-vertical-offset="1156">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1024,20 +923,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/planning.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="12" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="697">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/sprite/SpriteSheet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="21" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="595">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/util/Tickable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="0" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
@@ -1059,10 +944,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/planning.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="12" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="697">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/sprite/SpriteSheet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="21" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="595">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/audio/Audio.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="61" selection-start="723" selection-end="723" vertical-scroll-proportion="0.22222222" vertical-offset="85" max-vertical-offset="697">
-          <folding />
+        <state line="16" column="103" selection-start="1095" selection-end="1095" vertical-scroll-proportion="0.41666666" vertical-offset="0" max-vertical-offset="1326">
+          <folding>
+            <element signature="e#2567#2568#0" expanded="true" />
+            <element signature="e#2594#2595#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
