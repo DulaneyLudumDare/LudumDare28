@@ -5,6 +5,8 @@ import com.gregswebserver.ld28.util.vectors.Vector2i;
 
 public class Sprite extends Graphic {
 
+    public static Sprite nullSprite = new Sprite(new Vector2i(7, 7), 32, SpriteSheet.terrain);
+
     //terrain sprites
     public static Sprite path_flat = new Sprite(new Vector2i(0, 0), 32, SpriteSheet.terrain);
     public static Sprite path_straight = new Sprite(new Vector2i(0, 1), 32, SpriteSheet.terrain);
@@ -92,7 +94,7 @@ public class Sprite extends Graphic {
             for (int x = 0; x < size.getX(); x++) {
                 Vector2i thisPixel = new Vector2i(x, y);
                 Vector2i newPixel = new Vector2i();
-                switch (axis%2) {
+                switch (axis % 2) {
                     case 0:
                         newPixel = new Vector2i(newSize.getX() - thisPixel.getX(), thisPixel.getY());
                         break;
@@ -112,7 +114,7 @@ public class Sprite extends Graphic {
             for (int x = 0; x < size.getX(); x++) {
                 Vector2i thisPixel = new Vector2i(x, y);
                 Vector2i newPixel = new Vector2i();
-                switch (turns%4) {
+                switch (turns % 4) {
                     case 0:
                         newPixel = new Vector2i(thisPixel);
                         break;

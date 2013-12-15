@@ -51,7 +51,7 @@ public class Player extends UsesGame {
                 case 4:
                     return SpriteAnimation.move_side.iterator().next().flip(0);
                 default:
-                    return null;
+                    return Sprite.nullSprite;
             }
         } else {
             switch (location.getVelocity().getDirection()) {
@@ -64,7 +64,7 @@ public class Player extends UsesGame {
                 case 4:
                     return SpriteAnimation.stop_side.iterator().next().flip(0);
                 default:
-                    return null;
+                    return Sprite.nullSprite;
             }
         }
     }

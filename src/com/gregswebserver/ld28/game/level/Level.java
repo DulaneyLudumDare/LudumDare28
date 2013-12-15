@@ -27,6 +27,7 @@ public class Level {
 
     private void load(String path) {
         SpriteSheet lvl = new SpriteSheet(path, 128);
+        size = new Vector2i();
 
         for (int y = 0; y < lvl.size.getX(); y++) {
             for (int x = 0; x < lvl.size.getY(); x++) {
