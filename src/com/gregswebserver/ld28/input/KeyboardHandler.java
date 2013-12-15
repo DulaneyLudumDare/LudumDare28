@@ -8,23 +8,21 @@ import java.util.ArrayList;
 
 public class KeyboardHandler extends UsesGame implements KeyListener {
 
-    private ArrayList<Integer> keys = new ArrayList<Integer>();
+    private ArrayList<String> keys = new ArrayList<>();
 
     public void keyTyped(KeyEvent e) {
     }
 
     public void keyPressed(KeyEvent e) {
-        System.out.println("Pressed " + e.getKeyChar() + " " + e.getKeyCode());
-        keys.add(e.getKeyCode());
+        keys.add("" + e.getKeyCode());
     }
 
     public void keyReleased(KeyEvent e) {
-        System.out.println("Released " + e.getKeyChar() + " " + e.getKeyCode());
-        keys.remove(e.getKeyCode());
+        keys.remove("" + e.getKeyCode());
     }
 
     public boolean isPressed(int key) {
-        return keys.contains(key);
+        return keys.contains("" + key);
     }
 
     public int getArrowDir() {

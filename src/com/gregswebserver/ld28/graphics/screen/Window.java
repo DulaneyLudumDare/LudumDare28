@@ -1,5 +1,6 @@
 package com.gregswebserver.ld28.graphics.screen;
 
+import com.gregswebserver.ld28.input.KeyboardHandler;
 import com.gregswebserver.ld28.util.vectors.Vector2i;
 
 import javax.swing.*;
@@ -10,6 +11,8 @@ import java.awt.image.DataBufferInt;
 
 public class Window extends Canvas {
     private static final long serialVersionUID = 1L;
+
+    public KeyboardHandler keyboard = new KeyboardHandler();
 
     public final Vector2i size;
     public final String title = "Sight";
@@ -25,6 +28,7 @@ public class Window extends Canvas {
         pixels = ((DataBufferInt) image.getRaster().getDataBuffer()).getData();
         frame = new JFrame();
         setPreferredSize(new Dimension(size.getX(), size.getY()));
+        addKeyListener(keyboard);
         frame.setResizable(false);
         updateWindowText();
         frame.add(this);

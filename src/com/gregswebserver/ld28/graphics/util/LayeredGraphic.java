@@ -1,16 +1,15 @@
 package com.gregswebserver.ld28.graphics.util;
 
-import com.gregswebserver.ld28.util.Location;
 import com.gregswebserver.ld28.util.vectors.Vector2i;
 
 public abstract class LayeredGraphic extends Graphic {
 
     protected int layer;
-    protected Location location;
+    protected Vector2i position;
 
-    public LayeredGraphic(Vector2i size, Location location, int layer) {
+    public LayeredGraphic(Vector2i size, Vector2i position, int layer) {
         super(size);
-        this.location = location;
+        this.position = position;
         this.layer = layer;
         clear();
     }
@@ -19,8 +18,8 @@ public abstract class LayeredGraphic extends Graphic {
         return layer;
     }
 
-    public Location getLocation() {
-        return location;
+    public Vector2i getPosition() {
+        return position;
     }
 
     protected void renderImage(Vector2i position, Graphic image) {

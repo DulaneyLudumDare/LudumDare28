@@ -1,14 +1,12 @@
 package com.gregswebserver.ld28.game;
 
 import com.gregswebserver.ld28.game.level.Level;
-import com.gregswebserver.ld28.graphics.screen.ScreenArea;
 
 import java.util.HashMap;
 
 public class World {
 
     public Level level;
-    public ScreenArea levelArea;
     public HashMap<Integer, Player> players;
     public int activePlayer = 0;
 
@@ -26,14 +24,6 @@ public class World {
 
     public Level getLevel() {
         return level;
-    }
-
-    public ScreenArea getLevelRender() {
-        if (levelArea == null)
-            levelArea = level.getScreenArea();
-        levelArea.render();
-        levelArea.getLocation().setPos(getActivePlayer().getLocation().getPosition());
-        return levelArea;
     }
 
 }

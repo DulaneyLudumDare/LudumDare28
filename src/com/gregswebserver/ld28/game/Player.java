@@ -1,16 +1,15 @@
 package com.gregswebserver.ld28.game;
 
-import com.gregswebserver.ld28.graphics.screen.ScreenArea;
+import com.gregswebserver.ld28.graphics.screen.Screen;
 import com.gregswebserver.ld28.graphics.screen.ScreenObject;
 import com.gregswebserver.ld28.graphics.sprite.Sprite;
 import com.gregswebserver.ld28.graphics.sprite.SpriteAnimation;
 import com.gregswebserver.ld28.util.Location;
 import com.gregswebserver.ld28.util.vectors.Vector2d;
-import com.gregswebserver.ld28.util.vectors.Vector2i;
 
 public class Player extends UsesGame {
 
-    public double walkSpeed = 0;
+    public double walkSpeed = 1;
 
     private Location location;
 
@@ -18,23 +17,20 @@ public class Player extends UsesGame {
         this.location = location;
     }
 
-    public ScreenArea getScreenArea() {
-        ScreenArea player = new ScreenArea(new Vector2i(32, 64), new Location(), 1);
-        player.addObject("player", new ScreenObject(location, getSprite(), 0));
-        player.render();
-        return player;
-    }
-
     public void setMoving(int direction) {
         switch (direction) {
             case 1: //north
                 location.setVel(new Vector2d(0, walkSpeed));
+                break;
             case 2: //east
                 location.setVel(new Vector2d(walkSpeed, 0));
+                break;
             case 3: //south
                 location.setVel(new Vector2d(0, -walkSpeed));
+                break;
             case 4: //west
                 location.setVel(new Vector2d(-walkSpeed, 0));
+                break;
             case 0:
                 location.setVel(new Vector2d());
         }
@@ -70,7 +66,11 @@ public class Player extends UsesGame {
         }
     }
 
-    public Location getLocation(){
+    public Location getLocation() {
         return location;
+    }
+
+    public void render(Screen screen) {
+        screen.addObject("player", new ScreenObject(location.getPosition().toVector2i(), getSprite(), 3));
     }
 }

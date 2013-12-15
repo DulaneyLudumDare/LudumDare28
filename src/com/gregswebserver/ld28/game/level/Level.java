@@ -2,7 +2,7 @@ package com.gregswebserver.ld28.game.level;
 
 import com.gregswebserver.ld28.game.UsesGame;
 import com.gregswebserver.ld28.game.level.tile.*;
-import com.gregswebserver.ld28.graphics.screen.ScreenArea;
+import com.gregswebserver.ld28.graphics.screen.Screen;
 import com.gregswebserver.ld28.graphics.screen.ScreenObject;
 import com.gregswebserver.ld28.graphics.sprite.Sprite;
 import com.gregswebserver.ld28.graphics.sprite.SpriteSheet;
@@ -137,12 +137,10 @@ public class Level extends UsesGame {
         } while (true);
     }
 
-    public ScreenArea getScreenArea() {
-        ScreenArea area = new ScreenArea(new Vector2i(size).scale(32), new Location(), 0);
+    public void render(Screen screen) {
         for (Tile tile : tiles.values()) {
             Vector2i location = tile.getPosition();
-            area.addObject("tile" + location.toString(), new ScreenObject(new Location(location.toVector2d()), tile.getSprite(), 0));
+            screen.addObject("tile" + location.toString(), new ScreenObject(new Vector2i(location).scale(32), tile.getSprite(), 0));
         }
-        return area;
     }
 }

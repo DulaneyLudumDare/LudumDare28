@@ -31,6 +31,7 @@ public class Main implements Runnable {
         game = new Game();
         UsesGame.setGame(game);
         new Thread(this, "Main").start();
+
         isRunning = true;
     }
 
