@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd74f9fb-4584-4eca-ad46-64e911a0ad4a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/audio/rocks.wav" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gregswebserver/ld28/audio/Audio.java" afterPath="$PROJECT_DIR$/src/com/gregswebserver/ld28/audio/Audio.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gregswebserver/ld28/Main.java" afterPath="$PROJECT_DIR$/src/com/gregswebserver/ld28/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -71,7 +72,7 @@
       <file leaf-file-name="planning.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/planning.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="12" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="935">
+            <state line="15" column="0" selection-start="401" selection-end="401" vertical-scroll-proportion="0.0" vertical-offset="141" max-vertical-offset="935">
               <folding />
             </state>
           </provider>
@@ -86,10 +87,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="30" selection-start="821" selection-end="821" vertical-scroll-proportion="0.8014888" vertical-offset="102" max-vertical-offset="1071">
+            <state line="26" column="21" selection-start="730" selection-end="730" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1037">
               <folding />
             </state>
           </provider>
@@ -122,10 +123,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Audio.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Audio.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/audio/Audio.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="5" selection-start="2362" selection-end="2362" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1241">
+            <state line="20" column="4" selection-start="1200" selection-end="1200" vertical-scroll-proportion="0.67493796" vertical-offset="51" max-vertical-offset="1292">
               <folding />
             </state>
           </provider>
@@ -173,8 +174,8 @@
         <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/Screen.java" />
         <option value="$PROJECT_DIR$/res/planning.txt" />
         <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/util/vectors/Vector2i.java" />
-        <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/audio/Audio.java" />
         <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/audio/Audio.java" />
       </list>
     </option>
   </component>
@@ -441,6 +442,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LudumDare28" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LudumDare28" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="audio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -467,6 +486,11 @@
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="SearchEverywhereHistory" value="newPo" />
     <property name="FullScreen" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Daniel\IdeaProjects\LudumDare28\res\audio" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -698,7 +722,11 @@
       <created>1387124118317</created>
       <updated>1387124118317</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="finalized audio class interface">
+      <created>1387133269881</created>
+      <updated>1387133269881</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -755,7 +783,8 @@
     <MESSAGE value="added wav files to res" />
     <MESSAGE value="added wav files to res&#10;" />
     <MESSAGE value="added more wav files &amp; added audio support" />
-    <option name="LAST_COMMIT_MESSAGE" value="added more wav files &amp; added audio support" />
+    <MESSAGE value="finalized audio class interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="finalized audio class interface" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1104,13 +1133,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/planning.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="12" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="697">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/util/vectors/Vector2i.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="15" selection-start="237" selection-end="237" vertical-scroll-proportion="0.29411766" vertical-offset="41" max-vertical-offset="1785">
@@ -1118,16 +1140,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/audio/Audio.java">
+    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="5" selection-start="2362" selection-end="2362" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1241">
+        <state line="26" column="21" selection-start="730" selection-end="730" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1037">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/Main.java">
+    <entry file="file://$PROJECT_DIR$/res/planning.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="30" selection-start="821" selection-end="821" vertical-scroll-proportion="0.8014888" vertical-offset="102" max-vertical-offset="1071">
+        <state line="15" column="0" selection-start="401" selection-end="401" vertical-scroll-proportion="0.0" vertical-offset="141" max-vertical-offset="935">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/audio/Audio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="4" selection-start="1200" selection-end="1200" vertical-scroll-proportion="0.67493796" vertical-offset="51" max-vertical-offset="1292">
           <folding />
         </state>
       </provider>

@@ -8,13 +8,16 @@ public class Audio {
     public static Audio beam = new Audio("/audio/beam.wav");                    //end level
     public static Audio step1 = new Audio("/audio/step_1.wav");                 //walking
     public static Audio step2 = new Audio("/audio/step_2.wav");                 //walking
+    public static Audio trumpet = new Audio("/audio/trumpet.wav");              //meet up accomplishment
+    public static Audio switch_player = new Audio("/audio/switch_player.wav");  //changing player focus
+
     public static Audio bats = new Audio("/audio/bats.wav");                    //random ambiance
     public static Audio cave_sound_1 = new Audio("/audio/cave_sound_1.wav");    //random ambiance
     public static Audio cave_sound_2 = new Audio("/audio/cave_sound_2.wav");    //random ambiance
     public static Audio cave_sound_3 = new Audio("/audio/cave_sound_3.wav");    //random ambiance
+    public static Audio rocks = new Audio("/audio/rocks.wav");                  //random ambiance
     public static Audio dripping = new Audio("/audio/dripping.wav");            //background ambiance
-    public static Audio trumpet = new Audio("/audio/trumpet.wav");              //meet up accomplishment
-    public static Audio switch_player = new Audio("/audio/switch_player.wav");  //changing player focus
+
 
     private AudioInputStream aInStream;
     private Clip clip;
