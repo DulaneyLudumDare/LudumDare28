@@ -1,15 +1,12 @@
 package com.gregswebserver.ld28.util.vectors;
 
-public class Vector2d extends Vector {
-
-    private double x;
-    private double y;
+public class Vector2d extends Vector<Double> {
 
     public Vector2d() {
-        x = y = 0;
+        x = y = (double) 0;
     }
 
-    public Vector2d(int s) {
+    public Vector2d(double s) {
         this.x = s;
         this.y = s;
     }
@@ -26,10 +23,6 @@ public class Vector2d extends Vector {
 
     public double lengthSquared() {
         return x * x + y * y;
-    }
-
-    public double length() {
-        return (int) Math.sqrt(lengthSquared());
     }
 
     public Vector2d multiply(double scale) {
@@ -100,23 +93,7 @@ public class Vector2d extends Vector {
         return this.x * in.x + this.y * in.y;
     }
 
-    public double getX() {
-        return x;
-    }
-
-    public double getY() {
-        return y;
-    }
-
-    public void setX(double x) {
-        this.x = x;
-    }
-
-    public void setY(double y) {
-        this.y = y;
-    }
-
     public Vector2i toVector2i() {
-        return new Vector2i((int) x, (int) y);
+        return new Vector2i(x.intValue(), y.intValue());
     }
 }

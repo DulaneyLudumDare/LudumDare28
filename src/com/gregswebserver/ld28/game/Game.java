@@ -96,13 +96,14 @@ public class Game {
 
     public void loadNewGame(String name) {
         world = new World(name, 3);
+        hudScene.addArea("world", world.getLevel().getScreenArea());
         screen.loadScene(hudScene);
         update();
     }
 
     public void update() {
         world.getActivePlayer().setMoving(keyboard.getArrowDir());
-        screen.addArea("world", world.getLevel().getScreenArea());
+//        screen.addArea("world", world.getLevel().getScreenArea());
         screen.addArea("player", world.getActivePlayer().getScreenArea());
         screen.update();
     }

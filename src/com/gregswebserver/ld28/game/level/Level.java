@@ -1,5 +1,6 @@
 package com.gregswebserver.ld28.game.level;
 
+import com.gregswebserver.ld28.game.UsesGame;
 import com.gregswebserver.ld28.game.level.tile.*;
 import com.gregswebserver.ld28.graphics.screen.ScreenArea;
 import com.gregswebserver.ld28.graphics.screen.ScreenObject;
@@ -9,8 +10,9 @@ import com.gregswebserver.ld28.util.Location;
 import com.gregswebserver.ld28.util.vectors.Vector2i;
 
 import java.util.HashMap;
+import java.util.Random;
 
-public class Level {
+public class Level extends UsesGame {
 
     public static int pathColor = 0xff008000;
     public static int wallColor = 0xff4f4f4f;
@@ -112,6 +114,7 @@ public class Level {
     }
 
     private HashMap<Vector2i, Tile> getNeighbors(Tile parent) {
+
         HashMap<Vector2i, Tile> neighbors = new HashMap<>();
         for (int i = -1; i <= 8; i++) {
             if (i == 4) continue;
@@ -125,11 +128,16 @@ public class Level {
     }
 
     public Location getSpawnLocation() {
-        return new Location();
+        Random random = new Random();
+        do {
+            Vector2i position = new Vector2i(random.nextInt(size.getX()), random.nextInt(size.getY()));
+            if (tiles.get(position) instanceof PathTile)
+                return new Location(position.toVector2d());
+        } while (true);
     }
 
     public ScreenArea getScreenArea() {
-        ScreenArea area = new ScreenArea(size.scale(32), new Location(), 0);
+        ScreenArea area = new ScreenArea(new Vector2i(size).scale(32), new Location(), 0);
         for (Tile tile : tiles.values()) {
             Vector2i location = tile.getPosition();
             area.addObject("tile" + location.toString(), new ScreenObject(new Location(location.toVector2d()), tile.getSprite(), 0));
