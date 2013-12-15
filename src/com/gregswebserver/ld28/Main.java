@@ -1,5 +1,6 @@
 package com.gregswebserver.ld28;
 
+import com.gregswebserver.ld28.audio.Audio;
 import com.gregswebserver.ld28.game.Game;
 import com.gregswebserver.ld28.game.UsesGame;
 import com.gregswebserver.ld28.util.Clock;
@@ -24,6 +25,8 @@ public class Main implements Runnable {
     public static void main(String[] args) {
         Main main = new Main();
         main.start();
+        Audio.dripping.setVolume(-10.0f);//reduces by 10 db
+        Audio.dripping.play();
     }
 
     public synchronized void start() {
