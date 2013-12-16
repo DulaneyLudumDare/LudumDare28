@@ -41,26 +41,35 @@ public class World implements Tickable {
     }
 
     private Vector2i getScreenLocation(Screen screen, Vector2d in) {
-        Vector2i pixelCentering = new Vector2i(screen.size).divide(2).subtract(new Vector2i(16, 32));
+        Vector2i pixelCentering = new Vector2i(screen.size).divide(2).subtract(new Vector2i(16, 16));
         Vector2i offset = getActivePlayer().getLocation().getPosition().copy().multiply(32).toVector2i().subtract(pixelCentering);
         return in.copy().multiply(32).toVector2i().subtract(offset);
     }
 
     public void tick() {
-        Vector2d activeLocation = new Vector2d(getActivePlayer().getLocation().getPosition());
+        Vector2d activeLocation = getActivePlayer().getLocation().getPosition();
         for (Integer i : players.keySet()) {
             Player player = players.get(i);
             if (i != activePlayer) {
-                Vector2d bearing = new Vector2d(player.getLocation().getPosition()).subtract(activeLocation);
+                Vector2d bearing = player.getLocation().getPosition().copy().subtract(activeLocation);
                 if (bearing.lengthSquared() < 10 && bearing.lengthSquared() > 2)
                     player.setMoving(new Vector2d(-bearing.getX(), bearing.getY()));
                 else
                     player.setMoving(new Vector2d());
             }
+            Boundary currentBoundary = player.getBoundary();
+            Boundary playerBoundary = player.getNextBoundary();
+            HashMap<Vector2d, Tile> tiles = level.getAdjacentTiles(player.getLocation().copy().getPosition());
+            boolean conflict = false;
+            for (Tile tile : tiles.values()) {
+                if (tile.isSolid() && tile.getBoundary().conflicts(playerBoundary) && !tile.getBoundary().conflicts(currentBoundary)) {
+                    conflict = true;
+                }
+            }
+            if (conflict) player.getLocation().setVel(new Vector2d());
             player.getLocation().tick();
         }
     }
-
 
     public void input(Vector2d direction) {
         getActivePlayer().setMoving(direction);

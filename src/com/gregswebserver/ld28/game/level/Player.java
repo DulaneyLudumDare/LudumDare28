@@ -7,17 +7,12 @@ import com.gregswebserver.ld28.util.vectors.Vector2d;
 
 public class Player extends WorldObject {
 
-    private SpriteAnimation stop_right = new SpriteAnimation().addSprite(Sprite.player_stop_right_0).addSprite(Sprite.player_stop_right_1).addSprite(Sprite.player_stop_right_2).addSprite(Sprite.player_stop_right_3);
-    private SpriteAnimation stop_left = new SpriteAnimation().addSprite(Sprite.player_stop_left_0).addSprite(Sprite.player_stop_left_1).addSprite(Sprite.player_stop_left_2).addSprite(Sprite.player_stop_left_3);
-    private SpriteAnimation stop_up = new SpriteAnimation().addSprite(Sprite.player_stop_up_0).addSprite(Sprite.player_stop_up_1).addSprite(Sprite.player_stop_up_2).addSprite(Sprite.player_stop_up_3);
-    private SpriteAnimation stop_down = new SpriteAnimation().addSprite(Sprite.player_stop_down_0).addSprite(Sprite.player_stop_down_1).addSprite(Sprite.player_stop_down_2).addSprite(Sprite.player_stop_down_3);
-    private SpriteAnimation move_right = new SpriteAnimation().addSprite(Sprite.player_move_right_0).addSprite(Sprite.player_move_right_1).addSprite(Sprite.player_move_right_2).addSprite(Sprite.player_move_right_3);
-    private SpriteAnimation move_left = new SpriteAnimation().addSprite(Sprite.player_move_left_0).addSprite(Sprite.player_move_left_1).addSprite(Sprite.player_move_left_2).addSprite(Sprite.player_move_left_3);
-    private SpriteAnimation move_up = new SpriteAnimation().addSprite(Sprite.player_move_up_0).addSprite(Sprite.player_move_up_1).addSprite(Sprite.player_move_up_2).addSprite(Sprite.player_move_up_3);
-    private SpriteAnimation move_down = new SpriteAnimation().addSprite(Sprite.player_move_down_0).addSprite(Sprite.player_move_down_1).addSprite(Sprite.player_move_down_2).addSprite(Sprite.player_move_down_3);
+    private SpriteAnimation stop_straight = new SpriteAnimation().addSprite(Sprite.player_stop_straight_0).addSprite(Sprite.player_stop_straight_1).addSprite(Sprite.player_stop_straight_2).addSprite(Sprite.player_stop_straight_3);
+    private SpriteAnimation stop_diagonal = new SpriteAnimation().addSprite(Sprite.player_stop_diagonal_0).addSprite(Sprite.player_stop_diagonal_1).addSprite(Sprite.player_stop_diagonal_2).addSprite(Sprite.player_stop_diagonal_3);
+    private SpriteAnimation move_straight = new SpriteAnimation().addSprite(Sprite.player_move_straight_0).addSprite(Sprite.player_move_straight_1).addSprite(Sprite.player_move_straight_2).addSprite(Sprite.player_move_straight_3);
+    private SpriteAnimation move_diagonal = new SpriteAnimation().addSprite(Sprite.player_move_diagonal_0).addSprite(Sprite.player_move_diagonal_1).addSprite(Sprite.player_move_diagonal_2).addSprite(Sprite.player_move_diagonal_3);
 
-
-    public double walkSpeed = .1;
+    public double walkSpeed = 1.0/8;
     public int animSpeed = 6;
     private int cycleNum = 0;
     private Sprite sprite;
@@ -48,30 +43,19 @@ public class Player extends WorldObject {
     }
 
     public Sprite getNewSprite() {
-        int rotation = location.getRotation().getDirection();
-        if (rotation == 0) rotation = location.getRotation().getQuadrant();
-
+        int direction = location.getRotation().getDirection();
+        int rotation = location.getRotation().getQuadrant();
         if (location.isMoving()) {
-            switch (rotation) {
-                case 2:
-                    return move_right.next();
-                case 3:
-                    return move_up.next();
-                case 4:
-                    return move_left.next();
-                default:
-                    return move_down.next();
+            if (direction != 0) {
+                return move_straight.next().rotate(7 - direction);
+            } else {
+                return move_diagonal.next().rotate(rotation);
             }
         } else {
-            switch (rotation) {
-                case 2:
-                    return stop_right.next();
-                case 3:
-                    return stop_up.next();
-                case 4:
-                    return stop_left.next();
-                default:
-                    return stop_down.next();
+            if (direction != 0) {
+                return stop_straight.next().rotate(7 - direction);
+            } else {
+                return stop_diagonal.next().rotate(rotation);
             }
         }
     }
@@ -81,7 +65,12 @@ public class Player extends WorldObject {
     }
 
     public Boundary getBoundary() {
-        return new Boundary(location.getPosition().copy().add(new Vector2d(.2, 1.2)), new Vector2d(0.6));
+        return new Boundary(location.getPosition().copy().add(new Vector2d(.2, .2)), new Vector2d(0.6));
+    }
+
+    public Boundary getNextBoundary() {
+        Location newLoc = location.copy();
+        return new Boundary(newLoc.tick().getPosition().copy().add(new Vector2d(0.2, 0.2)), new Vector2d(0.6));
     }
 
     public boolean isSolid() {

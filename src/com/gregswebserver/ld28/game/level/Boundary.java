@@ -29,16 +29,16 @@ public class Boundary {
     }
 
     public boolean isBetween(double a, double b, double c) {
-        return ((a > b && b > c) || (a < b && b < c));
+        return ((a >= b && b >= c) || (a <= b && b <= c));
     }
 
     public boolean conflicts(Boundary other) {
         for (Vector2d point : getPoints()) {
-            if (other.contains(point)) return false;
+            if (other.contains(point)) return true;
         }
         for (Vector2d point : other.getPoints()) {
-            if (contains(point)) return false;
+            if (contains(point)) return true;
         }
-        return true;
+        return false;
     }
 }

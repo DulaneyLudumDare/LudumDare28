@@ -23,41 +23,25 @@ public class Sprite extends Graphic {
     public static Sprite landmark_path = new Sprite(new Vector2i(0, 0), 32, SpriteSheet.landmarks);
 
     //player sprites
-    public static Vector2i playerSize = new Vector2i(32, 64);
+    public static int playerSize = 32;
 
-    public static Sprite player_stop_right_0 = new Sprite(new Vector2i(0, 0), playerSize, SpriteSheet.player);
-    public static Sprite player_stop_right_1 = new Sprite(new Vector2i(32, 0), playerSize, SpriteSheet.player);
-    public static Sprite player_stop_right_2 = new Sprite(new Vector2i(64, 0), playerSize, SpriteSheet.player);
-    public static Sprite player_stop_right_3 = new Sprite(new Vector2i(96, 0), playerSize, SpriteSheet.player);
-    public static Sprite player_stop_left_0 = new Sprite(new Vector2i(0, 192), playerSize, SpriteSheet.player);
-    public static Sprite player_stop_left_1 = new Sprite(new Vector2i(32, 192), playerSize, SpriteSheet.player);
-    public static Sprite player_stop_left_2 = new Sprite(new Vector2i(64, 192), playerSize, SpriteSheet.player);
-    public static Sprite player_stop_left_3 = new Sprite(new Vector2i(96, 192), playerSize, SpriteSheet.player);
-    public static Sprite player_stop_up_0 = new Sprite(new Vector2i(0, 64), playerSize, SpriteSheet.player);
-    public static Sprite player_stop_up_1 = new Sprite(new Vector2i(32, 64), playerSize, SpriteSheet.player);
-    public static Sprite player_stop_up_2 = new Sprite(new Vector2i(64, 64), playerSize, SpriteSheet.player);
-    public static Sprite player_stop_up_3 = new Sprite(new Vector2i(96, 64), playerSize, SpriteSheet.player);
-    public static Sprite player_stop_down_0 = new Sprite(new Vector2i(0, 128), playerSize, SpriteSheet.player);
-    public static Sprite player_stop_down_1 = new Sprite(new Vector2i(32, 128), playerSize, SpriteSheet.player);
-    public static Sprite player_stop_down_2 = new Sprite(new Vector2i(64, 128), playerSize, SpriteSheet.player);
-    public static Sprite player_stop_down_3 = new Sprite(new Vector2i(96, 128), playerSize, SpriteSheet.player);
+    public static Sprite player_stop_straight_0 = new Sprite(new Vector2i(0, 0), playerSize, SpriteSheet.player);
+    public static Sprite player_stop_straight_1 = new Sprite(new Vector2i(1, 0), playerSize, SpriteSheet.player);
+    public static Sprite player_stop_straight_2 = new Sprite(new Vector2i(2, 0), playerSize, SpriteSheet.player);
+    public static Sprite player_stop_straight_3 = new Sprite(new Vector2i(3, 0), playerSize, SpriteSheet.player);
+    public static Sprite player_stop_diagonal_0 = new Sprite(new Vector2i(0, 1), playerSize, SpriteSheet.player);
+    public static Sprite player_stop_diagonal_1 = new Sprite(new Vector2i(1, 1), playerSize, SpriteSheet.player);
+    public static Sprite player_stop_diagonal_2 = new Sprite(new Vector2i(2, 1), playerSize, SpriteSheet.player);
+    public static Sprite player_stop_diagonal_3 = new Sprite(new Vector2i(3, 1), playerSize, SpriteSheet.player);
 
-    public static Sprite player_move_right_0 = new Sprite(new Vector2i(128, 0), playerSize, SpriteSheet.player);
-    public static Sprite player_move_right_1 = new Sprite(new Vector2i(160, 0), playerSize, SpriteSheet.player);
-    public static Sprite player_move_right_2 = new Sprite(new Vector2i(192, 0), playerSize, SpriteSheet.player);
-    public static Sprite player_move_right_3 = new Sprite(new Vector2i(224, 0), playerSize, SpriteSheet.player);
-    public static Sprite player_move_left_0 = new Sprite(new Vector2i(128, 192), playerSize, SpriteSheet.player);
-    public static Sprite player_move_left_1 = new Sprite(new Vector2i(160, 192), playerSize, SpriteSheet.player);
-    public static Sprite player_move_left_2 = new Sprite(new Vector2i(192, 192), playerSize, SpriteSheet.player);
-    public static Sprite player_move_left_3 = new Sprite(new Vector2i(224, 192), playerSize, SpriteSheet.player);
-    public static Sprite player_move_up_0 = new Sprite(new Vector2i(128, 64), playerSize, SpriteSheet.player);
-    public static Sprite player_move_up_1 = new Sprite(new Vector2i(160, 64), playerSize, SpriteSheet.player);
-    public static Sprite player_move_up_2 = new Sprite(new Vector2i(192, 64), playerSize, SpriteSheet.player);
-    public static Sprite player_move_up_3 = new Sprite(new Vector2i(224, 64), playerSize, SpriteSheet.player);
-    public static Sprite player_move_down_0 = new Sprite(new Vector2i(128, 128), playerSize, SpriteSheet.player);
-    public static Sprite player_move_down_1 = new Sprite(new Vector2i(160, 128), playerSize, SpriteSheet.player);
-    public static Sprite player_move_down_2 = new Sprite(new Vector2i(192, 128), playerSize, SpriteSheet.player);
-    public static Sprite player_move_down_3 = new Sprite(new Vector2i(224, 128), playerSize, SpriteSheet.player);
+    public static Sprite player_move_straight_0 = new Sprite(new Vector2i(4, 0), playerSize, SpriteSheet.player);
+    public static Sprite player_move_straight_1 = new Sprite(new Vector2i(5, 0), playerSize, SpriteSheet.player);
+    public static Sprite player_move_straight_2 = new Sprite(new Vector2i(6, 0), playerSize, SpriteSheet.player);
+    public static Sprite player_move_straight_3 = new Sprite(new Vector2i(7, 0), playerSize, SpriteSheet.player);
+    public static Sprite player_move_diagonal_0 = new Sprite(new Vector2i(4, 1), playerSize, SpriteSheet.player);
+    public static Sprite player_move_diagonal_1 = new Sprite(new Vector2i(5, 1), playerSize, SpriteSheet.player);
+    public static Sprite player_move_diagonal_2 = new Sprite(new Vector2i(6, 1), playerSize, SpriteSheet.player);
+    public static Sprite player_move_diagonal_3 = new Sprite(new Vector2i(7, 1), playerSize, SpriteSheet.player);
 
     public Sprite() {
         super(new Vector2i());

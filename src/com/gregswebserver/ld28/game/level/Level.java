@@ -134,7 +134,7 @@ public class Level extends UsesGame {
         for (int i = 0; i <= 8; i++) {
             if (i == 4) continue;
             Vector2d childPosition = new Vector2d((i / 3) - 1, (i % 3) - 1);
-            Tile adjacent = tiles.get(location.add(childPosition).toVector2i().toVector2d());
+            Tile adjacent = tiles.get(location.copy().add(childPosition).toVector2i().toVector2d());
             if (adjacent != null)
                 adjacentTiles.put(childPosition, adjacent);
         }

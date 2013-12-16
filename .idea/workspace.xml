@@ -2,28 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd74f9fb-4584-4eca-ad46-64e911a0ad4a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/graphics/vignette.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/Boundary.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/Player.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/World.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/WorldObject.java" />
-      <change type="DELETED" beforePath="C:\Users\Greg\Documents\Java\LudumDare28\src\com\gregswebserver\ld28\game\Player.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Greg\Documents\Java\LudumDare28\src\com\gregswebserver\ld28\game\World.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/Game.java" afterPath="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gregswebserver/ld28/input/KeyboardHandler.java" afterPath="$PROJECT_DIR$/src/com/gregswebserver/ld28/input/KeyboardHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/Boundary.java" afterPath="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/Boundary.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/Level.java" afterPath="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/Level.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gregswebserver/ld28/util/Location.java" afterPath="$PROJECT_DIR$/src/com/gregswebserver/ld28/util/Location.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/tile/PathLandmarkTile.java" afterPath="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/tile/PathLandmarkTile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/tile/PathTile.java" afterPath="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/tile/PathTile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/Player.java" afterPath="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/Player.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/screen/Screen.java" afterPath="$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/screen/Screen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/screen/ScreenObject.java" afterPath="$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/screen/ScreenObject.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/sprite/Sprite.java" afterPath="$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/sprite/Sprite.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/sprite/SpriteAnimation.java" afterPath="$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/sprite/SpriteAnimation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/sprite/SpriteSheet.java" afterPath="$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/sprite/SpriteSheet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/tile/Tile.java" afterPath="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/tile/Tile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gregswebserver/ld28/util/vectors/Vector2d.java" afterPath="$PROJECT_DIR$/src/com/gregswebserver/ld28/util/vectors/Vector2d.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gregswebserver/ld28/util/vectors/Vector2i.java" afterPath="$PROJECT_DIR$/src/com/gregswebserver/ld28/util/vectors/Vector2i.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/tile/WallLandmarkTile.java" afterPath="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/tile/WallLandmarkTile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/tile/WallTile.java" afterPath="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/tile/WallTile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/World.java" afterPath="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/World.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LudumDare28.iws" />
@@ -87,7 +73,20 @@
     <favorites_list name="LudumDare28" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="Player.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/Player.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="52" selection-start="1742" selection-end="1742" vertical-scroll-proportion="-1.1029083" vertical-offset="918" max-vertical-offset="1394">
+              <folding>
+                <element signature="e#2718#2719#0" expanded="true" />
+                <element signature="e#2749#2750#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -123,7 +122,6 @@
         <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/audio/Audio.java" />
         <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/screen/ScreenArea.java" />
         <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/util/LayeredGraphic.java" />
-        <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/screen/ScreenObject.java" />
         <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/UsesGame.java" />
         <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/Main.java" />
         <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/screen/Window.java" />
@@ -140,17 +138,18 @@
         <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/tile/Tile.java" />
         <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/WorldObject.java" />
         <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/Player.java" />
-        <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/util/Location.java" />
         <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/World.java" />
         <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/Game.java" />
-        <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/Level.java" />
         <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/util/vectors/Vector2d.java" />
-        <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/Player.java" />
-        <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/Boundary.java" />
         <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/sprite/SpriteSheet.java" />
         <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/sprite/Sprite.java" />
-        <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/World.java" />
+        <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/screen/ScreenObject.java" />
         <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/screen/Screen.java" />
+        <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/util/Location.java" />
+        <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/Player.java" />
+        <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/Boundary.java" />
+        <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/Level.java" />
+        <option value="$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/World.java" />
       </list>
     </option>
   </component>
@@ -186,8 +185,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -356,6 +353,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ld28" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="level" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LudumDare28" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LudumDare28" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -380,6 +407,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -466,19 +495,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -504,6 +520,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -665,12 +694,20 @@
       <created>1387154700388</created>
       <updated>1387154700388</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Added vignette surrounding the window, converted level objects to use double vectors.">
+      <created>1387172983082</created>
+      <updated>1387172983082</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Updated player.png">
+      <created>1387224348351</created>
+      <updated>1387224348351</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="854" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -679,7 +716,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35026738" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35026738" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -690,12 +727,12 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.200625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.200625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275401" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="UnknownFeatures">
@@ -727,7 +764,9 @@
     <MESSAGE value="Redid rendering, removed ScreenArea, and made the player move." />
     <MESSAGE value="FIXED TILE ROTATION :D" />
     <MESSAGE value="Beginning map panning and motion" />
-    <option name="LAST_COMMIT_MESSAGE" value="Beginning map panning and motion" />
+    <MESSAGE value="Added vignette surrounding the window, converted level objects to use double vectors." />
+    <MESSAGE value="Updated player.png" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated player.png" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -745,9 +784,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/sprite/SpriteSheet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="21" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="595">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -809,25 +846,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/input/MouseHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="43" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="714">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
+        <state line="7" column="43" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="714" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/util/Clock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="32" selection-start="388" selection-end="388" vertical-scroll-proportion="0.3531856" vertical-offset="0" max-vertical-offset="722">
-          <folding />
-        </state>
+        <state line="15" column="32" selection-start="388" selection-end="388" vertical-scroll-proportion="0.3531856" vertical-offset="0" max-vertical-offset="722" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/util/Debug.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="74" selection-start="1307" selection-end="1307" vertical-scroll-proportion="0.6468144" vertical-offset="60" max-vertical-offset="1037">
-          <folding />
-        </state>
+        <state line="31" column="74" selection-start="1307" selection-end="1307" vertical-scroll-proportion="0.6468144" vertical-offset="60" max-vertical-offset="1037" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/util/Lifetime.java">
@@ -868,9 +897,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/audio/Audio.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="33" selection-start="1477" selection-end="1477" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="1292">
-          <folding />
-        </state>
+        <state line="34" column="33" selection-start="1477" selection-end="1477" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="1292" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/game/UsesGame.java">
@@ -880,30 +907,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/graphics/player.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/util/LayeredGraphic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="454" selection-end="454" vertical-scroll-proportion="0.08153477" vertical-offset="255" max-vertical-offset="816">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/workspace/CookieClickingSim/src/com/gregharris/ccs/graphics/Screen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="24" selection-start="193" selection-end="193" vertical-scroll-proportion="0.2853717" vertical-offset="0" max-vertical-offset="2159">
-          <folding />
-        </state>
+        <state line="8" column="24" selection-start="193" selection-end="193" vertical-scroll-proportion="0.2853717" vertical-offset="0" max-vertical-offset="2159" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/workspace/CookieClickingSim/src/com/gregharris/ccs/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="24" selection-start="614" selection-end="614" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2618">
-          <folding />
-        </state>
+        <state line="21" column="24" selection-start="614" selection-end="614" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2618" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/levels/tutorial.png">
@@ -914,20 +925,6 @@
     <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="35" selection-start="1263" selection-end="1263" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="1054">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/screen/Window.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="27" selection-start="759" selection-end="759" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1241">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/sprite/SpriteAnimation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="110" selection-end="110" vertical-scroll-proportion="0.18478261" vertical-offset="0" max-vertical-offset="460">
           <folding />
         </state>
       </provider>
@@ -953,37 +950,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/tile/PathLandmarkTile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="36" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/tile/WallLandmarkTile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="36" selection-start="190" selection-end="190" vertical-scroll-proportion="0.17857143" vertical-offset="0" max-vertical-offset="476">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/tile/Tile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="5" selection-start="627" selection-end="627" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="544">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/util/vectors/Vector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="46" column="5" selection-start="858" selection-end="858" vertical-scroll-proportion="0.0" vertical-offset="305" max-vertical-offset="816">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/util/Location.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="36" selection-start="1013" selection-end="1013" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="1224">
           <folding />
         </state>
       </provider>
@@ -1002,45 +971,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/screen/ScreenObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="36" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/Boundary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="46" selection-start="1057" selection-end="1057" vertical-scroll-proportion="0.48043478" vertical-offset="357" max-vertical-offset="850">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#670#671#0" expanded="true" />
-            <element signature="e#699#700#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/game/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="32" selection-start="644" selection-end="644" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="714">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/util/vectors/Vector2d.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="0" selection-start="2521" selection-end="2521" vertical-scroll-proportion="0.0" vertical-offset="1461" max-vertical-offset="1921">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/Level.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="943" selection-end="943" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="2533">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/sprite/SpriteSheet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="9" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.0" vertical-offset="152" max-vertical-offset="612">
@@ -1048,23 +978,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/Player.java">
+    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/util/Graphic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="13" selection-start="3342" selection-end="3342" vertical-scroll-proportion="0.0" vertical-offset="47" max-vertical-offset="1547">
+        <state line="25" column="25" selection-start="678" selection-end="776" vertical-scroll-proportion="0.5565217" vertical-offset="152" max-vertical-offset="612">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/World.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="37" selection-start="879" selection-end="879" vertical-scroll-proportion="0.0" vertical-offset="118" max-vertical-offset="1139">
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/res/graphics/player.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/sprite/Sprite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="9" selection-start="6249" selection-end="6249" vertical-scroll-proportion="0.0" vertical-offset="1326" max-vertical-offset="2193">
+        <state line="31" column="40" selection-start="1990" selection-end="1990" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1921">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/sprite/SpriteAnimation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
           <folding />
         </state>
       </provider>
@@ -1078,17 +1013,106 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/util/Graphic.java">
+    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/util/LayeredGraphic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="25" selection-start="678" selection-end="776" vertical-scroll-proportion="0.5565217" vertical-offset="152" max-vertical-offset="612">
+        <state line="9" column="11" selection-start="229" selection-end="229" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/screen/ScreenObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="35" selection-start="520" selection-end="520" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/tile/WallLandmarkTile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="1" selection-start="235" selection-end="235" vertical-scroll-proportion="0.29565218" vertical-offset="0" max-vertical-offset="460">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/game/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="0" selection-start="971" selection-end="971" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/screen/Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="27" selection-start="759" selection-end="759" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1241">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/tile/PathLandmarkTile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="5" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/util/vectors/Vector2d.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="20" selection-start="503" selection-end="503" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1921">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/graphics/screen/Screen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="9" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.8891304" vertical-offset="390" max-vertical-offset="952">
+        <state line="9" column="13" selection-start="286" selection-end="286" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1054">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/Boundary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="18" selection-start="1187" selection-end="1187" vertical-scroll-proportion="0.0" vertical-offset="254" max-vertical-offset="816">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/Level.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="138" column="59" selection-start="5285" selection-end="5285" vertical-scroll-proportion="0.0" vertical-offset="2073" max-vertical-offset="2533">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/util/Location.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="32" selection-start="1076" selection-end="1076" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1343">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/tile/Tile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="20" selection-start="649" selection-end="649" vertical-scroll-proportion="0.0" vertical-offset="84" max-vertical-offset="544">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/World.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="135" selection-start="2986" selection-end="2986" vertical-scroll-proportion="0.7021739" vertical-offset="629" max-vertical-offset="1292">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gregswebserver/ld28/game/level/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="52" selection-start="1742" selection-end="1742" vertical-scroll-proportion="-1.1029083" vertical-offset="918" max-vertical-offset="1394">
+          <folding>
+            <element signature="e#2718#2719#0" expanded="true" />
+            <element signature="e#2749#2750#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

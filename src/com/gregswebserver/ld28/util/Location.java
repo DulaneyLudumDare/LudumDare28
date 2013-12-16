@@ -2,7 +2,7 @@ package com.gregswebserver.ld28.util;
 
 import com.gregswebserver.ld28.util.vectors.Vector2d;
 
-public class Location implements Tickable {
+public class Location {
 
     private Vector2d rotation;
     private Vector2d rVelocity;
@@ -26,16 +26,23 @@ public class Location implements Tickable {
         rVelocity = new Vector2d();
     }
 
-    public void tick() {
+    public Location(Location in) {
+        this.rotation = in.getRotation().copy();
+        this.rVelocity = in.getRVelocity().copy();
+        this.position = in.getPosition().copy();
+        this.velocity = in.getVelocity().copy();
+        this.acceleration = in.getAcceleration().copy();
+    }
+
+    public Location tick() {
         rotation.add(rVelocity);
         position.add(velocity);
         velocity.add(acceleration);
+        return this;
     }
 
-    public void untick() {
-        rotation.subtract(rVelocity);
-        velocity.subtract(acceleration);
-        position.subtract(velocity);
+    public Location copy() {
+        return new Location(this);
     }
 
     public void setRot(Vector2d in) {

@@ -1,5 +1,6 @@
 package com.gregswebserver.ld28.graphics.screen;
 
+import com.gregswebserver.ld28.game.level.Boundary;
 import com.gregswebserver.ld28.graphics.util.LayeredGraphic;
 import com.gregswebserver.ld28.util.vectors.Vector2i;
 
@@ -19,12 +20,14 @@ public class Screen extends LayeredGraphic {
     public void render() {
         clear();
         ArrayList<String> parsedList = new ArrayList<>();
+        Boundary screenBoundary = getBoundary();
         int activeLayer = 0;
         while (parsedList.size() < objects.size()) {
             for (String name : objects.keySet()) {
                 ScreenObject area = objects.get(name);
                 if (area.getLayer() == activeLayer && !parsedList.contains(name)) {
-                    renderImage(area.getPosition(), area);
+                    if (area.getBoundary().conflicts(screenBoundary))
+                        renderImage(area.getPosition(), area);
                     parsedList.add(name);
                 }
             }
@@ -50,5 +53,9 @@ public class Screen extends LayeredGraphic {
         for (int i = 0; i < pixels.length; i++) {
             pixels[i] = 0;
         }
+    }
+
+    public Boundary getBoundary() {
+        return new Boundary(position.toVector2d(), size.toVector2d());
     }
 }
