@@ -8,7 +8,7 @@ Credits
 
 Dan Ackerson (code!)
 
-Matt Carbaugh (audio!)
+Matt Carbaugh (support!)
 
 Greg Harris (code!)
 
