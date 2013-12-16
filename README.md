@@ -8,12 +8,12 @@ Credits
 
 Dan Ackerson (code!)
 
-Matt Carbaugh (audio!)
-
 Greg Harris (code!)
 
 Brian Levis (graphics!)
 
 Rashid Taleb (audio!)
+
+Matt Carbaugh (support!)
 
 Vincent Song (nothing!)
