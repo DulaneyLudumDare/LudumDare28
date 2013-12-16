@@ -1,9 +1,9 @@
 package com.gregswebserver.ld28.game.level.tile;
 
-import com.gregswebserver.ld28.util.vectors.Vector2i;
+import com.gregswebserver.ld28.util.vectors.Vector2d;
 
 public class PathLandmarkTile extends PathTile {
-    public PathLandmarkTile(Vector2i position) {
+    public PathLandmarkTile(Vector2d position) {
         super(position);
     }
 }

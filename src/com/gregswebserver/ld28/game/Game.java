@@ -1,5 +1,6 @@
 package com.gregswebserver.ld28.game;
 
+import com.gregswebserver.ld28.game.level.World;
 import com.gregswebserver.ld28.graphics.screen.Screen;
 import com.gregswebserver.ld28.graphics.screen.Window;
 import com.gregswebserver.ld28.util.Debug;
@@ -27,8 +28,8 @@ public class Game {
     }
 
     public void update() {
-        world.getActivePlayer().setMoving(window.keyboard.getArrows());
-        world.getActivePlayer().getLocation().tick();
+        world.input(window.keyboard.getArrows());
+        world.tick();
         screen.clearObjects();
         world.render(screen);
     }

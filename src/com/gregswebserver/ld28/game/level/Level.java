@@ -2,8 +2,6 @@ package com.gregswebserver.ld28.game.level;
 
 import com.gregswebserver.ld28.game.UsesGame;
 import com.gregswebserver.ld28.game.level.tile.*;
-import com.gregswebserver.ld28.graphics.screen.Screen;
-import com.gregswebserver.ld28.graphics.screen.ScreenObject;
 import com.gregswebserver.ld28.graphics.sprite.Sprite;
 import com.gregswebserver.ld28.graphics.sprite.SpriteSheet;
 import com.gregswebserver.ld28.util.Location;
@@ -20,7 +18,7 @@ public class Level extends UsesGame {
     public static int pathLandmarkColor = 0xffffff00;
     public static int wallLandmarkColor = 0xff00ffff;
 
-    public HashMap<Vector2i, Tile> tiles = new HashMap<>();
+    public HashMap<Vector2d, Tile> tiles = new HashMap<>();
     private Vector2i size;
 
     public Level(String level) {
@@ -34,8 +32,8 @@ public class Level extends UsesGame {
 
         for (int y = 0; y < lvl.size.getX(); y++) {
             for (int x = 0; x < lvl.size.getY(); x++) {
-                Vector2i location = new Vector2i(x, y);
-                int color = lvl.getPixel(location);
+                Vector2d location = new Vector2d(x, y);
+                int color = lvl.getPixel(location.toVector2i());
                 if (color == pathColor)
                     tiles.put(location, new PathTile(location));
                 else if (color == wallColor)
@@ -58,11 +56,11 @@ public class Level extends UsesGame {
 
     private void finalizeOrientations() {
         for (Tile parent : tiles.values()) {
-            HashMap<Vector2i, Tile> children = getNeighbors(parent);
+            HashMap<Vector2d, Tile> children = getNeighbors(parent);
             int type = 0;
             int rotation = 0;
             Vector2d cumulative = new Vector2d();
-            for (Vector2i child : children.keySet()) {
+            for (Vector2d child : children.keySet()) {
                 cumulative.add(child.unit());
             }
             switch (children.size()) {
@@ -119,26 +117,36 @@ public class Level extends UsesGame {
         }
     }
 
-    private HashMap<Vector2i, Tile> getNeighbors(Tile parent) {
-
-        HashMap<Vector2i, Tile> neighbors = new HashMap<>();
+    private HashMap<Vector2d, Tile> getNeighbors(Tile center) {
+        HashMap<Vector2d, Tile> adjacentTiles = new HashMap<>();
         for (int i = 0; i <= 8; i++) {
             if (i == 4) continue;
-            Vector2i childPosition = new Vector2i((i / 3) - 1, (i % 3) - 1);
-            Tile child = tiles.get(new Vector2i(parent.getPosition()).add(childPosition));
-            if ((child instanceof WallTile && parent instanceof WallTile) || (child instanceof PathTile && parent instanceof PathTile)) {
-                neighbors.put(childPosition, child);
-            }
+            Vector2d childPosition = new Vector2d((i / 3) - 1, (i % 3) - 1);
+            Tile adjacent = tiles.get(center.getPosition().copy().add(childPosition));
+            if ((center instanceof WallTile && adjacent instanceof WallTile) || (center instanceof PathTile && adjacent instanceof PathTile))
+                adjacentTiles.put(childPosition, adjacent);
         }
-        return neighbors;
+        return adjacentTiles;
+    }
+
+    public HashMap<Vector2d, Tile> getAdjacentTiles(Vector2d location) {
+        HashMap<Vector2d, Tile> adjacentTiles = new HashMap<>();
+        for (int i = 0; i <= 8; i++) {
+            if (i == 4) continue;
+            Vector2d childPosition = new Vector2d((i / 3) - 1, (i % 3) - 1);
+            Tile adjacent = tiles.get(location.add(childPosition).toVector2i().toVector2d());
+            if (adjacent != null)
+                adjacentTiles.put(childPosition, adjacent);
+        }
+        return adjacentTiles;
     }
 
     public Location getSpawnLocation() {
         Random random = new Random();
         do {
-            Vector2i position = new Vector2i(random.nextInt(size.getX()), random.nextInt(size.getY()));
+            Vector2d position = new Vector2d(random.nextInt(size.getX()), random.nextInt(size.getY()));
             if (tiles.get(position) instanceof PathTile)
-                return new Location(position.toVector2d());
+                return new Location(position);
         } while (true);
     }
 }

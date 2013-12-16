@@ -38,8 +38,8 @@ public class Vector2d extends Vector<Double> {
     }
 
     public Vector2d subtract(Vector2d in) {
-        this.x += in.x;
-        this.y += in.y;
+        this.x -= in.x;
+        this.y -= in.y;
         return this;
     }
 
@@ -99,5 +99,9 @@ public class Vector2d extends Vector<Double> {
 
     public Vector2d unit() {
         return new Vector2d(this).multiply(1 / length());
+    }
+
+    public Vector2d copy(){
+        return new Vector2d(this);
     }
 }

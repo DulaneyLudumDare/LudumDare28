@@ -32,6 +32,12 @@ public class Location implements Tickable {
         velocity.add(acceleration);
     }
 
+    public void untick() {
+        rotation.subtract(rVelocity);
+        velocity.subtract(acceleration);
+        position.subtract(velocity);
+    }
+
     public void setRot(Vector2d in) {
         this.rotation = in;
     }

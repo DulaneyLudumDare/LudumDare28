@@ -45,4 +45,10 @@ public class Screen extends LayeredGraphic {
             objects.remove(name);
         }
     }
+
+    public void clear() {
+        for (int i = 0; i < pixels.length; i++) {
+            pixels[i] = 0;
+        }
+    }
 }

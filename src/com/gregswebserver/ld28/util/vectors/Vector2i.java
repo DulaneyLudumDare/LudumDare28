@@ -31,7 +31,7 @@ public class Vector2i extends Vector<Integer> {
         return this;
     }
 
-    public Vector2i divide(int scale){
+    public Vector2i divide(int scale) {
         this.x /= scale;
         this.y /= scale;
         return this;
@@ -105,5 +105,9 @@ public class Vector2i extends Vector<Integer> {
 
     public Vector2d unit() {
         return toVector2d().multiply(1 / length());
+    }
+
+    public Vector2i copy() {
+        return new Vector2i(this);
     }
 }

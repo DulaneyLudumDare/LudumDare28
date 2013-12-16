@@ -6,6 +6,7 @@ import com.gregswebserver.ld28.util.vectors.Vector2i;
 public class Sprite extends Graphic {
 
     public static Sprite nullSprite = new Sprite(new Vector2i(7, 7), 32, SpriteSheet.terrain);
+    public static Sprite vignette = new Sprite(new Vector2i(), new Vector2i(512, 288), SpriteSheet.vignette);
 
     //terrain sprites
     public static Sprite path_flat = new Sprite(new Vector2i(0, 0), 32, SpriteSheet.terrain);
@@ -85,12 +86,10 @@ public class Sprite extends Graphic {
         //Dynamic sprites with varying sizes and start positions.
         super(dim);
         clear();
-        if (spritesheet.size.contains(new Vector2i(size).add(dim))) {
-            for (int y = 0; y < dim.getY(); y++) {
-                for (int x = 0; x < dim.getX(); x++) {
-                    int col = spritesheet.pixels[start.getX() + x + (start.getY() + y) * spritesheet.size.getX()];
-                    pixels[x + y * dim.getX()] = col;
-                }
+        for (int y = 0; y < dim.getY(); y++) {
+            for (int x = 0; x < dim.getX(); x++) {
+                int col = spritesheet.pixels[start.getX() + x + (start.getY() + y) * spritesheet.size.getX()];
+                pixels[x + y * dim.getX()] = col;
             }
         }
     }

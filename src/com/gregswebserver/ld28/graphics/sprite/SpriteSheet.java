@@ -12,9 +12,15 @@ public class SpriteSheet extends Graphic {
     public static SpriteSheet terrain = new SpriteSheet("/graphics/terrain.png", 256);
     public static SpriteSheet landmarks = new SpriteSheet("/graphics/landmarks.png", 128);
     public static SpriteSheet player = new SpriteSheet("/graphics/player.png", 256);
+    public static SpriteSheet vignette = new SpriteSheet("/graphics/vignette.png", new Vector2i(512, 288));
 
     public SpriteSheet(String path, int size) {
         super(new Vector2i(size));
+        load(path);
+    }
+
+    public SpriteSheet(String path, Vector2i dim) {
+        super(dim);
         load(path);
     }
 
