@@ -1,7 +1,5 @@
 package com.gregswebserver.ld28.game;
 
-import com.gregswebserver.ld28.graphics.screen.Screen;
-import com.gregswebserver.ld28.graphics.screen.ScreenObject;
 import com.gregswebserver.ld28.graphics.sprite.Sprite;
 import com.gregswebserver.ld28.graphics.sprite.SpriteAnimation;
 import com.gregswebserver.ld28.util.Location;
@@ -23,7 +21,7 @@ public class Player extends UsesGame {
 
     public void setMoving(Vector2i direction) {
         location.setVel(new Vector2d(direction.getX(), -direction.getY()).multiply(walkSpeed));
-        location.setRot(location.getVelocity());
+        if (location.getVelocity().lengthSquared() > 0.5) location.setRot(location.getVelocity());
     }
 
     public Sprite getSprite() {
@@ -64,9 +62,5 @@ public class Player extends UsesGame {
 
     public Location getLocation() {
         return location;
-    }
-
-    public void render(Screen screen) {
-        screen.addObject("player", new ScreenObject(location.getPosition().toVector2i(), getSprite(), 3));
     }
 }

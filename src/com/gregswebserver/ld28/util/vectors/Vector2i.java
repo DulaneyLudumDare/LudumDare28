@@ -31,6 +31,12 @@ public class Vector2i extends Vector<Integer> {
         return this;
     }
 
+    public Vector2i divide(int scale){
+        this.x /= scale;
+        this.y /= scale;
+        return this;
+    }
+
     public Vector2i add(Vector2i in) {
         this.x += in.x;
         this.y += in.y;

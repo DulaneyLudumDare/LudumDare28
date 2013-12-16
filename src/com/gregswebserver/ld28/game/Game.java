@@ -7,7 +7,7 @@ import com.gregswebserver.ld28.util.vectors.Vector2i;
 
 public class Game {
 
-    public final Vector2i size = new Vector2i(512, 288).multiply(2);
+    public final Vector2i size = new Vector2i(512, 288).multiply(1);
 
     public Debug debug;
     public Screen screen;
@@ -17,7 +17,7 @@ public class Game {
 
     public Game() {
         debug = new Debug();
-        window = new Window(size, 1);
+        window = new Window(size, 2);
         screen = new Screen(size);
         loadNewGame("tutorial");
     }
@@ -30,8 +30,7 @@ public class Game {
         world.getActivePlayer().setMoving(window.keyboard.getArrows());
         world.getActivePlayer().getLocation().tick();
         screen.clearObjects();
-        world.getLevel().render(screen);
-        world.getActivePlayer().render(screen);
+        world.render(screen);
     }
 
     public void render() {

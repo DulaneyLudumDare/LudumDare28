@@ -20,7 +20,7 @@ public class Level extends UsesGame {
     public static int pathLandmarkColor = 0xffffff00;
     public static int wallLandmarkColor = 0xff00ffff;
 
-    private HashMap<Vector2i, Tile> tiles = new HashMap<>();
+    public HashMap<Vector2i, Tile> tiles = new HashMap<>();
     private Vector2i size;
 
     public Level(String level) {
@@ -140,12 +140,5 @@ public class Level extends UsesGame {
             if (tiles.get(position) instanceof PathTile)
                 return new Location(position.toVector2d());
         } while (true);
-    }
-
-    public void render(Screen screen) {
-        for (Tile tile : tiles.values()) {
-            Vector2i location = tile.getPosition();
-            screen.addObject("tile" + location.toString(), new ScreenObject(new Vector2i(location).multiply(32), tile.getSprite(), 0));
-        }
     }
 }
