@@ -1,20 +1,21 @@
 package com.gregswebserver.ld28.game.level;
 
+import com.gregswebserver.ld28.game.UsesGame;
 import com.gregswebserver.ld28.game.level.tile.Tile;
 import com.gregswebserver.ld28.graphics.screen.Screen;
 import com.gregswebserver.ld28.graphics.screen.ScreenObject;
 import com.gregswebserver.ld28.graphics.sprite.Sprite;
-import com.gregswebserver.ld28.util.Tickable;
 import com.gregswebserver.ld28.util.vectors.Vector2d;
 import com.gregswebserver.ld28.util.vectors.Vector2i;
 
 import java.util.HashMap;
 
-public class World implements Tickable {
+public class World extends UsesGame {
 
     public Level level;
     public HashMap<Integer, Player> players;
     public int activePlayer = 0;
+    public int animStep = 0;
 
     public World(String name, int numPlayers) {
         players = new HashMap<>();
@@ -29,6 +30,21 @@ public class World implements Tickable {
     }
 
     public void render(Screen screen) {
+        switch (game.scene) {
+            case 0:
+                screen.addObject("title", new ScreenObject(screen.size.copy().divide(2).subtract(Sprite.title.size.copy().divide(2)), Sprite.title, 0));
+                break;
+            case 1:
+                screen.addObject("intro", new ScreenObject(new Vector2i(screen.size.copy().divide(2).subtract(Sprite.intro.size.copy().divide(2)).getX(), 288 - (animStep / 6)), Sprite.intro, 0));
+                break;
+            case 2:
+            case 3:
+            case 4:
+                worldRender(screen);
+        }
+    }
+
+    private void worldRender(Screen screen) {
         for (Tile tile : level.tiles.values()) {
             Vector2d location = tile.getPosition();
             screen.addObject("tile" + location.toString(), new ScreenObject(getScreenLocation(screen, location), tile.getSprite(), 0));
@@ -47,6 +63,40 @@ public class World implements Tickable {
     }
 
     public void tick() {
+        switch (game.scene) {
+            case 0:
+                if (game.window.keyboard.hasKeyPressed()) game.scene = 1;
+                animStep = 0;
+                break;
+            case 1:
+                animStep++;
+                if ((animStep > 120) && game.window.keyboard.hasKeyPressed()) game.scene = 2;
+                break;
+            case 2:
+                game.loadNewGame("tutorial");
+                game.scene = 3;
+                break;
+            case 3:
+                worldTick();
+                break;
+            case 4:
+                game.loadNewGame("maze1");
+                game.scene = 5;
+                break;
+            case 5:
+                worldTick();
+                break;
+            case 6:
+                game.loadNewGame("maze2");
+                game.scene = 7;
+                break;
+            case 7:
+                worldTick();
+                break;
+        }
+    }
+
+    public void worldTick() {
         Vector2d activeLocation = getActivePlayer().getLocation().getPosition();
         for (Integer i : players.keySet()) {
             Player player = players.get(i);

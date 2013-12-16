@@ -6,7 +6,9 @@ import com.gregswebserver.ld28.util.vectors.Vector2i;
 public class Sprite extends Graphic {
 
     public static Sprite nullSprite = new Sprite(new Vector2i(7, 7), 32, SpriteSheet.terrain);
-    public static Sprite vignette = new Sprite(new Vector2i(), new Vector2i(512, 288), SpriteSheet.vignette);
+    public static Sprite vignette = new Sprite(SpriteSheet.vignette);
+    public static Sprite title = new Sprite(SpriteSheet.title);
+    public static Sprite intro = new Sprite(SpriteSheet.intro);
 
     //terrain sprites
     public static Sprite path_flat = new Sprite(new Vector2i(0, 0), 32, SpriteSheet.terrain);
@@ -46,6 +48,11 @@ public class Sprite extends Graphic {
     public Sprite() {
         super(new Vector2i());
         clear();
+    }
+
+    public Sprite(SpriteSheet spritesheet) {
+        super(spritesheet.size.copy());
+        this.pixels = spritesheet.pixels;
     }
 
     public Sprite(Vector2i size) {

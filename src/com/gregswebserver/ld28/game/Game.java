@@ -14,6 +14,8 @@ public class Game {
     public Screen screen;
     public Window window;
 
+    public int scene = 0;
+
     private World world;
 
     public Game() {

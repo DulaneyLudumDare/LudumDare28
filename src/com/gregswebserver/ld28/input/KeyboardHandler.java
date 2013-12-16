@@ -35,4 +35,8 @@ public class KeyboardHandler extends UsesGame implements KeyListener {
         if (isPressed(KeyEvent.VK_LEFT) || isPressed(KeyEvent.VK_A)) sum.add(new Vector2d(-1, 0));
         return sum;
     }
+
+    public boolean hasKeyPressed() {
+        return (keys.size() > 0);
+    }
 }
