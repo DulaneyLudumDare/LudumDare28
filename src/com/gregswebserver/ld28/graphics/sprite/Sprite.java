@@ -27,23 +27,23 @@ public class Sprite extends Graphic {
     //player sprites
     public static int playerSize = 32;
 
-    public static Sprite player_stop_straight_0 = new Sprite(new Vector2i(0, 0), playerSize, SpriteSheet.player);
-    public static Sprite player_stop_straight_1 = new Sprite(new Vector2i(1, 0), playerSize, SpriteSheet.player);
-    public static Sprite player_stop_straight_2 = new Sprite(new Vector2i(2, 0), playerSize, SpriteSheet.player);
-    public static Sprite player_stop_straight_3 = new Sprite(new Vector2i(3, 0), playerSize, SpriteSheet.player);
-    public static Sprite player_stop_diagonal_0 = new Sprite(new Vector2i(0, 1), playerSize, SpriteSheet.player);
-    public static Sprite player_stop_diagonal_1 = new Sprite(new Vector2i(1, 1), playerSize, SpriteSheet.player);
-    public static Sprite player_stop_diagonal_2 = new Sprite(new Vector2i(2, 1), playerSize, SpriteSheet.player);
-    public static Sprite player_stop_diagonal_3 = new Sprite(new Vector2i(3, 1), playerSize, SpriteSheet.player);
+    public static Sprite player_stop_straight_0 = new Sprite(new Vector2i(4, 0), playerSize, SpriteSheet.player);
+    public static Sprite player_stop_straight_1 = new Sprite(new Vector2i(5, 0), playerSize, SpriteSheet.player);
+    public static Sprite player_stop_straight_2 = new Sprite(new Vector2i(6, 0), playerSize, SpriteSheet.player);
+    public static Sprite player_stop_straight_3 = new Sprite(new Vector2i(7, 0), playerSize, SpriteSheet.player);
+    public static Sprite player_stop_diagonal_0 = new Sprite(new Vector2i(4, 1), playerSize, SpriteSheet.player);
+    public static Sprite player_stop_diagonal_1 = new Sprite(new Vector2i(5, 1), playerSize, SpriteSheet.player);
+    public static Sprite player_stop_diagonal_2 = new Sprite(new Vector2i(6, 1), playerSize, SpriteSheet.player);
+    public static Sprite player_stop_diagonal_3 = new Sprite(new Vector2i(7, 1), playerSize, SpriteSheet.player);
 
-    public static Sprite player_move_straight_0 = new Sprite(new Vector2i(4, 0), playerSize, SpriteSheet.player);
-    public static Sprite player_move_straight_1 = new Sprite(new Vector2i(5, 0), playerSize, SpriteSheet.player);
-    public static Sprite player_move_straight_2 = new Sprite(new Vector2i(6, 0), playerSize, SpriteSheet.player);
-    public static Sprite player_move_straight_3 = new Sprite(new Vector2i(7, 0), playerSize, SpriteSheet.player);
-    public static Sprite player_move_diagonal_0 = new Sprite(new Vector2i(4, 1), playerSize, SpriteSheet.player);
-    public static Sprite player_move_diagonal_1 = new Sprite(new Vector2i(5, 1), playerSize, SpriteSheet.player);
-    public static Sprite player_move_diagonal_2 = new Sprite(new Vector2i(6, 1), playerSize, SpriteSheet.player);
-    public static Sprite player_move_diagonal_3 = new Sprite(new Vector2i(7, 1), playerSize, SpriteSheet.player);
+    public static Sprite player_move_straight_0 = new Sprite(new Vector2i(0, 0), playerSize, SpriteSheet.player);
+    public static Sprite player_move_straight_1 = new Sprite(new Vector2i(1, 0), playerSize, SpriteSheet.player);
+    public static Sprite player_move_straight_2 = new Sprite(new Vector2i(2, 0), playerSize, SpriteSheet.player);
+    public static Sprite player_move_straight_3 = new Sprite(new Vector2i(3, 0), playerSize, SpriteSheet.player);
+    public static Sprite player_move_diagonal_0 = new Sprite(new Vector2i(0, 1), playerSize, SpriteSheet.player);
+    public static Sprite player_move_diagonal_1 = new Sprite(new Vector2i(1, 1), playerSize, SpriteSheet.player);
+    public static Sprite player_move_diagonal_2 = new Sprite(new Vector2i(2, 1), playerSize, SpriteSheet.player);
+    public static Sprite player_move_diagonal_3 = new Sprite(new Vector2i(3, 1), playerSize, SpriteSheet.player);
 
     public Sprite() {
         super(new Vector2i());

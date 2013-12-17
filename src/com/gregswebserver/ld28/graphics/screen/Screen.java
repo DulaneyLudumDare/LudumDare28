@@ -23,16 +23,20 @@ public class Screen extends LayeredGraphic {
         Boundary screenBoundary = getBoundary();
         int activeLayer = 0;
         while (parsedList.size() < objects.size()) {
+            int render = 0;
             for (String name : objects.keySet()) {
                 ScreenObject area = objects.get(name);
                 if (area.getLayer() == activeLayer && !parsedList.contains(name)) {
                     if (area.getBoundary().conflicts(screenBoundary))
-                        renderImage(area.getPosition(), area);
+                        render++;
+                    renderImage(area.getPosition(), area);
                     parsedList.add(name);
                 }
             }
+            System.out.println("rendered " + render + " in layer " + activeLayer);
             activeLayer++;
         }
+        System.out.println(" out of " + objects.size() + " objects");
     }
 
     public void clearObjects() {

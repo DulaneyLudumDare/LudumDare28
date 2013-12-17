@@ -49,9 +49,11 @@ public class Audio {
     }
 
     public void loop() {
-        clip.setMicrosecondPosition(0);
-        clip.loop(Clip.LOOP_CONTINUOUSLY);
-        clip.start();
+        if (!clip.isActive()) {
+            clip.setMicrosecondPosition(0);
+            clip.loop(Clip.LOOP_CONTINUOUSLY);
+            clip.start();
+        }
     }
 
     public void stop() {
@@ -63,7 +65,7 @@ public class Audio {
     }
 
     public void setVolume(float db) {
-        if(db > -80.0f && db <= 6.0f)
+        if (db > -80.0f && db <= 6.0f)
             gainControl.setValue(db);
         else
             gainControl.setValue(0.0f);

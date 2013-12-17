@@ -17,12 +17,14 @@ public class World extends UsesGame {
     public int activePlayer = 0;
     public int animStep = 0;
 
-    public World(String name, int numPlayers) {
+    public void loadNew(String name, int numPlayers) {
         players = new HashMap<>();
         level = new Level(name);
         for (int i = 0; i < numPlayers; i++) {
             players.put(i, new Player(level.getSpawnLocation()));
         }
+        activePlayer = 0;
+        animStep = 0;
     }
 
     public Player getActivePlayer() {
@@ -37,9 +39,7 @@ public class World extends UsesGame {
             case 1:
                 screen.addObject("intro", new ScreenObject(new Vector2i(screen.size.copy().divide(2).subtract(Sprite.intro.size.copy().divide(2)).getX(), 288 - (animStep / 6)), Sprite.intro, 0));
                 break;
-            case 2:
-            case 3:
-            case 4:
+            default:
                 worldRender(screen);
         }
     }
@@ -63,46 +63,12 @@ public class World extends UsesGame {
     }
 
     public void tick() {
-        switch (game.scene) {
-            case 0:
-                if (game.window.keyboard.hasKeyPressed()) game.scene = 1;
-                animStep = 0;
-                break;
-            case 1:
-                animStep++;
-                if ((animStep > 120) && game.window.keyboard.hasKeyPressed()) game.scene = 2;
-                break;
-            case 2:
-                game.loadNewGame("tutorial");
-                game.scene = 3;
-                break;
-            case 3:
-                worldTick();
-                break;
-            case 4:
-                game.loadNewGame("maze1");
-                game.scene = 5;
-                break;
-            case 5:
-                worldTick();
-                break;
-            case 6:
-                game.loadNewGame("maze2");
-                game.scene = 7;
-                break;
-            case 7:
-                worldTick();
-                break;
-        }
-    }
-
-    public void worldTick() {
         Vector2d activeLocation = getActivePlayer().getLocation().getPosition();
         for (Integer i : players.keySet()) {
             Player player = players.get(i);
             if (i != activePlayer) {
                 Vector2d bearing = player.getLocation().getPosition().copy().subtract(activeLocation);
-                if (bearing.lengthSquared() < 10 && bearing.lengthSquared() > 2)
+                if (bearing.lengthSquared() < 10 && bearing.lengthSquared() > 1.5)
                     player.setMoving(new Vector2d(-bearing.getX(), bearing.getY()));
                 else
                     player.setMoving(new Vector2d());
@@ -119,6 +85,16 @@ public class World extends UsesGame {
             if (conflict) player.getLocation().setVel(new Vector2d());
             player.getLocation().tick();
         }
+    }
+
+    public int playersSurroundingExit() {
+        int count = 0;
+        for (Player player : players.values()) {
+            Vector2d dist = player.getLocation().getPosition().copy().subtract(level.endLocation);
+            if (dist.lengthSquared() < 20)
+                count++;
+        }
+        return count;
     }
 
     public void input(Vector2d direction) {

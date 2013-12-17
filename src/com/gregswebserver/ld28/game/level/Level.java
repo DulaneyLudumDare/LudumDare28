@@ -17,9 +17,11 @@ public class Level extends UsesGame {
     public static int wallColor = 0xff4f4f4f;
     public static int pathLandmarkColor = 0xffffff00;
     public static int wallLandmarkColor = 0xff00ffff;
+    public static int endTileColor = 0xff00ff00;
 
     public HashMap<Vector2d, Tile> tiles = new HashMap<>();
     private Vector2i size;
+    public Vector2d endLocation;
 
     public Level(String level) {
         load("/levels/" + level + ".png");
@@ -42,6 +44,10 @@ public class Level extends UsesGame {
                     tiles.put(location, new PathLandmarkTile(location));
                 else if (color == wallLandmarkColor)
                     tiles.put(location, new WallLandmarkTile(location));
+                else if (color == endTileColor){
+                    tiles.put(location, new PathLandmarkTile(location));
+                    endLocation = location;
+                }
                 else {
                     if (x == 0) {
                         size.setY(y);

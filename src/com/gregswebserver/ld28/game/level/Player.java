@@ -1,5 +1,6 @@
 package com.gregswebserver.ld28.game.level;
 
+import com.gregswebserver.ld28.audio.Audio;
 import com.gregswebserver.ld28.graphics.sprite.Sprite;
 import com.gregswebserver.ld28.graphics.sprite.SpriteAnimation;
 import com.gregswebserver.ld28.util.Location;
@@ -12,9 +13,11 @@ public class Player extends WorldObject {
     private SpriteAnimation move_straight = new SpriteAnimation().addSprite(Sprite.player_move_straight_0).addSprite(Sprite.player_move_straight_1).addSprite(Sprite.player_move_straight_2).addSprite(Sprite.player_move_straight_3);
     private SpriteAnimation move_diagonal = new SpriteAnimation().addSprite(Sprite.player_move_diagonal_0).addSprite(Sprite.player_move_diagonal_1).addSprite(Sprite.player_move_diagonal_2).addSprite(Sprite.player_move_diagonal_3);
 
-    public double walkSpeed = 1.0/8;
+    public double walkSpeed = 1.0/12;
     public int animSpeed = 6;
     private int cycleNum = 0;
+
+    private int stepCount = 0;
     private Sprite sprite;
 
     private Location location;
@@ -46,6 +49,9 @@ public class Player extends WorldObject {
         int direction = location.getRotation().getDirection();
         int rotation = location.getRotation().getQuadrant();
         if (location.isMoving()) {
+            stepCount++;
+//            if (stepCount%4 == 0) Audio.step1.play();
+//            if (stepCount%4 == 2) Audio.step1.play();
             if (direction != 0) {
                 return move_straight.next().rotate(7 - direction);
             } else {

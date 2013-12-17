@@ -15,6 +15,7 @@ public class Boundary {
         this.opposite = origin.copy().add(size);
         points = new ArrayList<>();
         points.add(origin);
+        points.add(origin.copy().add(size).multiply(0.5));
         points.add(origin.copy().add(new Vector2d(size.getX(), 0)));
         points.add(origin.copy().add(new Vector2d(0, size.getY())));
         points.add(opposite);
