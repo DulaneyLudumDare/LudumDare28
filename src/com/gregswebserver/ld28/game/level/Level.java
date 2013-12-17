@@ -72,16 +72,16 @@ public class Level extends UsesGame {
             switch (children.size()) {
                 case 3:
                     type = 2;
-                    rotation = cumulative.getQuadrant() - 1;
+                    rotation = cumulative.getQuadrant();
                     break;
                 case 5:
                 case 6:
                     type = 1;
-                    rotation = 4 - cumulative.getDirection();
+                    rotation = 5 - cumulative.getDirection();
                     break;
                 case 7:
                     type = 3;
-                    rotation = cumulative.getQuadrant() - 1;
+                    rotation = cumulative.getQuadrant()+2;
                     break;
                 default:
                     type = 0;

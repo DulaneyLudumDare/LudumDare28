@@ -47,7 +47,8 @@ public class World extends UsesGame {
     private void worldRender(Screen screen) {
         for (Tile tile : level.tiles.values()) {
             Vector2d location = tile.getPosition();
-            screen.addObject("tile" + location.toString(), new ScreenObject(getScreenLocation(screen, location), tile.getSprite(), 0));
+            if (screen.getBoundary().conflicts(new Boundary(getScreenLocation(screen, location).toVector2d(), new Vector2d(32))))
+                screen.addObject("tile" + location.toString(), new ScreenObject(getScreenLocation(screen, location), tile.getSprite(), 0));
         }
         for (Integer i : players.keySet()) {
             Player player = players.get(i);
