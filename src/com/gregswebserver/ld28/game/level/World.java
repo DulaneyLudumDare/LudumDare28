@@ -1,6 +1,7 @@
 package com.gregswebserver.ld28.game.level;
 
 import com.gregswebserver.ld28.game.UsesGame;
+import com.gregswebserver.ld28.game.level.tile.PathLandmarkTile;
 import com.gregswebserver.ld28.game.level.tile.Tile;
 import com.gregswebserver.ld28.graphics.screen.Screen;
 import com.gregswebserver.ld28.graphics.screen.ScreenObject;
@@ -47,8 +48,12 @@ public class World extends UsesGame {
     private void worldRender(Screen screen) {
         for (Tile tile : level.tiles.values()) {
             Vector2d location = tile.getPosition();
-            if (screen.getBoundary().conflicts(new Boundary(getScreenLocation(screen, location).toVector2d(), new Vector2d(32))))
+            if (screen.getBoundary().conflicts(new Boundary(getScreenLocation(screen, location).toVector2d(), new Vector2d(32)))) {
                 screen.addObject("tile" + location.toString(), new ScreenObject(getScreenLocation(screen, location), tile.getSprite(), 0));
+                if (tile instanceof PathLandmarkTile) {
+                    screen.addObject("tile" + location.toString() + "o", new ScreenObject(getScreenLocation(screen, location), ((PathLandmarkTile) tile).getFeature(), 1));
+                }
+            }
         }
         for (Integer i : players.keySet()) {
             Player player = players.get(i);

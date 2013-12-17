@@ -45,7 +45,7 @@ public class Level extends UsesGame {
                 else if (color == wallLandmarkColor)
                     tiles.put(location, new WallLandmarkTile(location));
                 else if (color == endTileColor){
-                    tiles.put(location, new PathLandmarkTile(location));
+                    tiles.put(location, new TeleporterTile(location));
                     endLocation = location;
                 }
                 else {

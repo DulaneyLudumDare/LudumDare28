@@ -21,8 +21,8 @@ public class Sprite extends Graphic {
     public static Sprite wall_corner_in = new Sprite(new Vector2i(3, 1), 32, SpriteSheet.terrain);
 
     //landmark sprites
-    public static Sprite landmark_wall = new Sprite(new Vector2i(0, 0), 32, SpriteSheet.landmarks);
-    public static Sprite landmark_path = new Sprite(new Vector2i(0, 0), 32, SpriteSheet.landmarks);
+    public static Sprite landmark_crack = new Sprite(new Vector2i(4, 0), 32, SpriteSheet.terrain);
+    public static Sprite landmark_skull = new Sprite(new Vector2i(5, 0), 32, SpriteSheet.terrain);
 
     //player sprites
     public static int playerSize = 32;
@@ -44,6 +44,7 @@ public class Sprite extends Graphic {
     public static Sprite player_move_diagonal_1 = new Sprite(new Vector2i(1, 1), playerSize, SpriteSheet.player);
     public static Sprite player_move_diagonal_2 = new Sprite(new Vector2i(2, 1), playerSize, SpriteSheet.player);
     public static Sprite player_move_diagonal_3 = new Sprite(new Vector2i(3, 1), playerSize, SpriteSheet.player);
+    public static Sprite teleporter = new Sprite(new Vector2i(4, 1), 32, SpriteSheet.terrain);
 
     public Sprite() {
         super(new Vector2i());

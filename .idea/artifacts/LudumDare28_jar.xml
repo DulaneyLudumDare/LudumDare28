@@ -3,6 +3,8 @@
     <output-path>$PROJECT_DIR$/out/artifacts/LudumDare28_jar</output-path>
     <root id="archive" name="LudumDare28.jar">
       <element id="module-output" name="LudumDare28" />
+      <element id="dir-copy" path="$PROJECT_DIR$/src" />
+      <element id="dir-copy" path="$PROJECT_DIR$/res" />
     </root>
   </artifact>
 </component>
