@@ -28,38 +28,38 @@ public class Game {
     }
 
     public void loadNewGame(String name) {
-        Audio.dripping.setVolume(-10);
-        Audio.dripping.stop();
+//        Audio.dripping.setVolume(-10);
+//        Audio.dripping.stop();
         world.loadNew(name, 3);
-        Audio.dripping.play();
+//        Audio.dripping.play();
     }
 
     public void update() {
         world.input(window.keyboard.getArrows());
         switch (scene) {
             case 0:
-                Audio.cave_sound_1.setVolume(-40);
-                Audio.cave_sound_1.loop();
+//                Audio.cave_sound_1.setVolume(-40);
+//                Audio.cave_sound_1.loop();
                 if (window.keyboard.hasKeyPressed()) scene = 1;
                 world.animStep = 0;
                 break;
             case 1:
-                Audio.cave_sound_2.setVolume(-40);
-                Audio.cave_sound_1.stop();
-                Audio.cave_sound_2.loop();
+//                Audio.cave_sound_2.setVolume(-40);
+//                Audio.cave_sound_1.stop();
+//                Audio.cave_sound_2.loop();
                 world.animStep++;
                 if ((world.animStep > 30) && window.keyboard.hasKeyPressed()) scene = 2;
                 break;
             case 2:
-                Audio.cave_sound_2.stop();
+//                Audio.cave_sound_2.stop();
                 loadNewGame("tutorial");
                 scene = 3;
                 break;
             case 3:
-                Audio.beam.setVolume(-20);
+//                Audio.beam.setVolume(-20);
                 world.tick();
                 if (world.players.size() == world.playersSurroundingExit()) {
-                    Audio.beam.play();
+//                    Audio.beam.play();
                     scene = 4;
                 }
                 break;
@@ -70,7 +70,7 @@ public class Game {
             case 5:
                 world.tick();
                 if (world.players.size() == world.playersSurroundingExit()) {
-                    Audio.beam.play();
+//                    Audio.beam.play();
                     scene = 6;
                 }
                 break;
@@ -81,7 +81,7 @@ public class Game {
             case 7:
                 world.tick();
                 if (world.players.size() == world.playersSurroundingExit()) {
-                    Audio.trumpet.play();
+//                    Audio.trumpet.play();
                     scene = 8;
                 }
                 break;
